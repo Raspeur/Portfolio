@@ -1,0 +1,76 @@
+\documentclass[12pt]{report}
+
+% Packages nécessaires
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{lipsum} % Package de remplissage de texte (à retirer dans le rapport final)
+\usepackage{graphicx}
+\usepackage{float} % pour l'option de placement [H]
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=green]{hyperref}
+\usepackage{minted} % pour la coloration syntaxique
+\usepackage{wrapfig} % Pour l'enroulement du texte autour des images
+\usepackage{array}
+\usepackage{colortbl} %Pour les couleurs des colonnes et lignes des tableaux
+% Définition de nouveaux types de colonnes centrées
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% Mathématiques
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+\usepackage{mdframed}  % Package pour les cadres
+
+% Environnements pour les théorèmes, définitions et preuves
+\newtheorem{theorem}{Théorème}
+\newtheorem{definition}{Définition}
+\newtheorem{example}{Exemple}
+\newtheorem{property}{Propriété}
+
+\newmdtheoremenv{boxedproperty}{Propriété}[section]  % Crée un environnement encadré pour les propriétés
+
+% Configuration de la page
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% Pour avoir le petit dessin de l'INSA en bas à droite de chaque page
+\usepackage{background}
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,
+color=black,
+contents={\begin{tikzpicture}[remember picture,overlay]
+\node at ([xshift=-0.8in,yshift=0.8in] current page.south east) % Adjust the position of the logo.
+{\includegraphics[scale=0.8]{images/pattern.png}}; % logo goes here
+\end{tikzpicture}}
+}
+
+% Configuration des titres des sections et sous-sections
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptername\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+% Numérotation des chapitres en chiffres romains
+\renewcommand{\thechapter}{\Roman{chapter}.}
+% Numérotation des sections et sous-sections en chiffres arabes
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+% Configuration de la table des matières
+\renewcommand{\cftchapfont}{\bfseries}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsubsecfont}{\normalfont}
+\renewcommand{\cftchappagefont}{\bfseries}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsubsecpagefont}{\normalfont}
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{10pt}
+\renewcommand{\contentsname}{Table des matières}
+
+\begin{document}
+    \input{content/all_content}
+\end{document}

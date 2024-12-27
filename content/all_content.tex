@@ -1,0 +1,109 @@
+% Page de titre
+\begin{titlepage}
+    \centering
+
+    % Minipages pour les logos
+    \noindent % Assure qu'il n'y a pas d'indentation au début de la ligne
+    \begin{minipage}{0.5\textwidth}
+        \includegraphics[width=0.5\linewidth]{images/logo_INSA.png} % Ajustez le chemin et la taille
+    \end{minipage}%
+    \hfill % Assure que les deux minipages seront poussés à l'extrême gauche et droite
+    \begin{minipage}{0.5\textwidth}
+        \flushright % Alignement à droite dans la minipage
+        \includegraphics[width=0.5\linewidth]{images/logo_universite_toulouse.png} % Ajustez le chemin et la taille
+    \end{minipage}
+
+
+    \vspace*{2cm} % Espace vertical de 2 cm
+    {\Huge\bfseries Innovative Smart System \par}
+    \vspace{1cm}
+    {\huge Portefolio\par}
+    \vspace{2cm}
+    {\Large \textbf{Clément Gauché} \par}
+    \vspace{2cm}
+    
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/Logo_ISS_sans_texte.png}
+    \end{figure}
+    
+    \vfill
+    {\Large \textbf{Institut National des Sciences Appliquées de Toulouse} \par}
+    \vspace{1cm}
+    {\large \today \par}
+\end{titlepage}
+
+% Résumé concis, souvent utilisé pour donner un aperçu rapide du contenu d'une recherche ou d'un article académique.
+\begin{abstract}
+    \lipsum[1] % Lorem Ipsum
+\end{abstract}
+
+% Table des matières
+\tableofcontents
+
+% Introduction
+\chapter{Introduction}
+\input{content/introduction}
+
+% Début du contenu du rapport
+\chapter{Courses description}
+\input{content/descriptive_part/table_description}
+
+\newpage
+% Cloud and Edge Computing
+\input{content/descriptive_part/cloud_and_edge_computing}
+
+\newpage
+% 5G Technologies
+\input{content/descriptive_part/5G_technologies}
+
+\newpage
+% Service orienté architecture
+\input{content/descriptive_part/service_architecture}
+
+\newpage
+% Wireless Sensor Network
+\input{content/descriptive_part/wireless_sensor_networks}
+
+\newpage
+% Middleware for IOT
+\input{content/descriptive_part/middleware_for_iot}
+
+\newpage
+% Security for Connected Objects
+\input{content/descriptive_part/security_for_connected_objects}
+
+\newpage
+% Energy for IOT (or Connected Objects)
+\input{content/descriptive_part/energy_for_connected_objects}
+
+\newpage
+% LAB at AIME
+\input{content/descriptive_part/lab_at_aime}
+
+\newpage
+% Microcontrollers Open-Source Hardware and Sensor Introduction
+\input{content/descriptive_part/microcontrollers_open-source_hardware_and_sensor_introduction}
+
+\newpage
+% Communication protocols for LP-WPAN
+\input{content/descriptive_part/communication_protocols_for_LP-WPAN}
+
+\newpage
+% Embedded IA for IOT
+\input{content/descriptive_part/embedded_ia_for_IOT}
+
+\newpage
+% Emerging Networks
+\input{content/descriptive_part/emerging_networks}
+
+\newpage
+% Sensors Introduction
+\input{content/descriptive_part/sensors_introduction}
+
+\newpage
+% Master REOC
+\input{content/descriptive_part/master_reoc}
+
+\newpage
+\input{content/conclusion}
