@@ -1,1 +1,75 @@
 \section{Communication protocols for LP-WPAN}
+\subsection{Context}
+%LP-WPAN course was taught by Slim Abdelatif.
+%The objective of this course is to discover a specific TCP/IP protocol stack for LP-WPAN.
+%With the training of ISS centered on IoT, it is very interesting to see an example of implementation a sensor network protocol stack.
+
+\indent \indent The LP-WPAN module, part of the IoT network architecture course, provided an in-depth understanding of low-power, short-range wireless communication technologies tailored for constrained IoT devices.
+The focus was on IEEE 802.15.4, which serves as a foundation for many IoT protocols like Zigbee, 6LoWPAN, and Thread.
+This standard facilitates the communication of devices with limited resources, such as sensors and actuators in smart homes, industrial monitoring, and environmental applications.
+
+\vspace{0.25cm}
+\indent Throughout this course, I explored the intricacies of LP-WPAN, including its architecture, challenges, and specific adaptations for IoT networks.
+The emphasis on constrained environments—characterized by low bandwidth, high energy efficiency, and dynamic topologies—highlighted the unique challenges of enabling reliable and scalable IoT communications.
+
+\vspace{0.25cm}
+\indent This module provided me with a solid theoretical foundation and hands-on experience in designing and evaluating LP-WPAN technologies, especially in the context of IPv6 adaptation.
+
+\subsection{Technical}
+The technical aspect of this module revolved around the design, characteristics, and operation of LP-WPAN networks and their interplay with the IPv6 protocol.
+Several key concepts were covered:
+
+\subsubsection{IoT Network Characteristics and Specificities}
+LP-WPANs are constrained by low power, small frame sizes (127 bytes max), and low data rates (up to 250 kbps).
+Networks are scalable, supporting dynamic addition and removal of devices, and rely on protocols like IEEE 802.15.4 for physical and MAC layers.
+Energy efficiency is a key focus, with devices often operating in low-power or sleep modes.
+
+Rationale for Adopting IPv6
+IPv6 Basics
+IPv6 Adaptation for IoT Networks
+IETF IPv6-Based Stack for IoT
+Existing IPv6-Based Network Technologies for IoT
+Relevance of IPv6 in the Semester Project
+IoT and Sustainability
+
+\subsubsection{Guided Tutorials}
+\indent \indent The practical sessions provided hands-on experience with LP-WPAN technologies, focusing on configuring IPv6 and 6LoWPAN.
+The practical sessions for the LP-WPAN module were structured around two interconnected labs, focusing on configuring and analyzing IPv6 networks and exploring 6LoWPAN and RPL protocols. These labs were designed to provide hands-on experience with the technologies discussed in the theoretical component of the course, enabling the application of concepts in simulated IoT environments.
+
+\vspace{0.25cm}
+In the first lab, the focus was on understanding IPv6 auto-configuration processes. This included tasks such as assigning link-local and global addresses, performing Duplicate Address Detection (DAD), and analyzing the behavior of the Neighbor Discovery Protocol (NDP). Using tools like Wireshark, we captured and studied IPv6 packets, including router advertisements and multicast traffic. These activities not only demonstrated the initialization steps of IPv6 but also provided insights into how IPv6 ensures scalability and compatibility in IoT systems.
+
+\vspace{0.25cm}
+The second lab expanded on this foundation by delving into 6LoWPAN header compression and the RPL (Routing Protocol for Low-power and Lossy Networks).
+We utilized Mininet-WiFi to simulate a constrained IoT network and experimented with 6LoWPAN's ability to reduce IPv6 overhead, improving data transmission efficiency over IEEE 802.15.4.
+Additionally, we explored RPL's functionality in building and maintaining routing paths in multi-hop networks.
+By examining DODAG formations and routing tables, we gained a practical understanding of how RPL supports reliable communication in low-power environments.
+
+
+\subsection{Skills acquired}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|p{3.5cm}|p{8cm}|p{3.5cm}|}
+    \hline
+    \textbf{Competence} & \textbf{Description} & \textbf{Level of Mastery} \\
+    \hline
+    IPv6 Network Configuration & Setting up IPv6 with auto-configuration and NDP for IoT networks. & Advanced \\
+    \hline
+    6LoWPAN Header Compression & Reducing IPv6 header sizes to improve efficiency in LP-WPAN. & Advanced \\
+    \hline
+    RPL Implementation & Configuring and analyzing RPL routing in multi-hop IoT networks. & Intermediate \\
+    \hline
+    Wireshark Analysis & Capturing and interpreting IPv6 traffic to identify optimization opportunities. & Advanced \\
+    \hline
+    IoT Sustainability Design & Balancing network performance with energy efficiency. & Intermediate \\
+    \hline
+    \end{tabular}
+    \caption{Competences Gained During the LP-WPAN Module}
+\end{table}
+
+\subsection{Analysis and remarks}
+\indent This module underscored the challenges and innovations of constrained IoT networks.
+The guided tutorials and simulation project provided a hands-on understanding of IPv6 adaptation for LP-WPAN, particularly through 6LoWPAN and RPL.
+The experience revealed the critical trade-offs between performance, power consumption, and scalability in IoT designs.
+This learning experience not only expanded my technical skillset but also offered valuable insights into the sustainability implications of IoT technologies.
