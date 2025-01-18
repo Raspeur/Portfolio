@@ -1,0 +1,153 @@
+% \section{Microcontrollers Open-Source Hardware and Sensors Introduction} 
+
+% \subsection{Context}
+% %Après la semaine à l'AIME pour la réalisation des capteurs de gaz, nous avons eu des cours au département de physique.
+% %Ces cours étaient axés sur la réalisation de la datasheet du capteur et le dimensionnement des composants pour l'étage d'adaptation permettant lire les valeurs du capteur.
+% %Nous avons aussi eu une introduction sur les microcontrôleurs, sur l'utilisation de KiCad pour la réalisation de PCB, sur le fonctionnement de chirspack et de NodeRed.
+% %L'objectif de ce module était de nous apprendre à réaliser un système complet allant du capteur de gaz, en passant par la datasheet du capteur, jusqu'à une interface web utilisateur sous NodeRed.
+
+% \indent \indent Après une semaine à l'AIME dédiée à la réalisation de capteurs de gaz, nous avons suivi des cours au département de physique. Ces cours portaient sur la création de la fiche technique du capteur et le dimensionnement des composants pour l'étage d'adaptation permettant de lire les valeurs du capteur. Nous avons également eu une introduction aux microcontrôleurs, à l'utilisation de KiCad pour la conception de PCB, ainsi qu'au fonctionnement de Chirspack et de NodeRed. L'objectif de ce module était de nous apprendre à réaliser un système complet, allant du capteur de gaz à la fiche technique du capteur, jusqu'à une interface utilisateur web sous NodeRed.
+
+% \subsection{Technical Summary}
+% %1- Semaine AIME
+% %2- Microcontroller introduction (LoRa et Chirspack/TTN)
+% %3- Dimensionnement LTSPICE
+% %4- Git introduction
+% %5- App MIT inventor
+% %6- NodeRed introduction
+% %7- KiCad introduction
+% %8- Modélisation/Realisation de la PCB
+
+% \indent \indent Ce module, qui s'est étalé sur plusieurs semaines, a commencé par la semaine de réalisation des capteurs de gaz à l'AIME. Ensuite, nous avons eu une introduction aux microcontroleurs, plus à l'attention des étudiants venant de la filière IR, qui ont pu découvrir les microcontroleurs en manipulant des cartes Arduinos.
+% Etant plus à l'aise, car provenant de la filière AE, mon binome et moi avons choisit de travailler sur un microcontrolleur ESP8266, et de le connecter au réseau LoRa de l'INSA à l'aide d'un module RN2483.
+
+% Ce module était cependant très peu fonctionnel, probablement à cause des erreurs d'alimentation faites par les étudiants des précédentes années qui l'interfacait avec un arduino. Ce module est sensé être alimenté en 3.3V, mais les signaux des arduinos sont en 5V, ce qui sans étage d'adaptation de tension endommage le module. Face a ces problèmes, j'ai décidé d'utiliser mes modules esp32 personnels, qui ont un module LoRa intégré. Nous avons aussi rencontré des problèmes avec la gateway chirspack de l'INSA, qui étaient souvent saturée, et qui nous permettait d'envoyer des trames 1 fois sur 10. J'ai donc décidé de travailler avec ma propre gateway, qui est elle enregistrée sur The Thing Network (TTN), et qui fonctionnait parfaitement. Une fois les trames LoRa visualisable sur le site de TTN, nous avons utilisé un capteur MQ-3B pour simuler le fonctionnement de notre propre capteur de gaz.
+
+% Nous avons ensuite eu un cours de dimensionnement de composant sur le logiciel LTSPICE, qui nous a permis de comprendre le fonctionnement de notre étage d'adaptation, et de dimensionner les composants pour qu'il fonctionne correctement.
+
+% Nous avons aussi eu une introduction à Git, ce qui n'était pas nouveau pour moi, car j'utilise Git dans mon entreprise, mais qui a permis à mes camarades de découvrir cet outil de gestion de version.
+
+% Le cours suivant était une introduction à l'application MIT inventor, qui permet de générer rapidement une application android. En ajoutant un module Bluetooth à notre ESP32, nous avons pu controller l'allumage d'une LED depuis l'application.
+
+% Nous avons ensuite eu une introduction à NodeRed, qui est un outil de programmation par blocs, qui permet de créer des applications web de manière très simple. Nous avons utilisé cet outil pour créer une interface web permettant de visualiser les données de notre capteur de gaz, via un protocole MQTT pour récupérer les données de la plateforme TTN.
+
+% Enfin, nous avons eu une introduction à KiCad, qui est un logiciel de conception de PCB. Nous avons utilisé ce logiciel pour réaliser un "shield" pour notre ESP32, qui permet de connecter, et de réaliser l'étage d'adaptation pour notre capteur de gaz. Comme nous manquions de temps pour réaliser le PCB, je l'ai commandé chez JLC PCB, et j'ai réalisé le montage des composants à sa reception.
+
+% Vous pouvez retrouver l'intégralité du projet sur mon github: \url{https://github.com/Raspeur/AIME_sensor}
+
+% \subsection{Skills acquired}
+% \begin{table}[H]
+%     \centering
+%     \begin{tabular}{|p{3.5cm}|p{8cm}|p{3.5cm}|}
+%     \hline
+%     \textbf{Competence} & \textbf{Description} & \textbf{Level of Mastery} \\
+%     \hline
+%     Understand Microcontroller Architecture & 
+%     Comprehending microcontroller architectures, functionalities, and usage scenarios. & 
+%     Advanced \\
+%     \hline
+%     Data Acquisition System Design & 
+%     Designing end-to-end data acquisition systems by selecting sensors, conditioning signals, and integrating microcontrollers for specific applications. & 
+%     Advanced \\
+%     \hline
+%     Sensor Signal Conditioner Circuit & 
+%     Developing and simulating signal conditioning circuits for sensors to ensure accurate data acquisition. & 
+%     Advanced \\
+%     \hline
+%     Shield Design for Gas Sensor & 
+%     Designing and fabricating custom hardware expansions (shields) to properly integrate gas sensors. & 
+%     Advanced \\
+%     \hline
+%     Sensor Software and HMI Development & 
+%     Implementing embedded software solutions, including sensor drivers, data processing, and user interfaces for gas sensing applications. & 
+%     Advanced \\
+%     \hline
+%     Smart Device Integration & 
+%     Combining hardware and software components into a cohesive, fully operational IoT device. & 
+%     Advanced \\
+%     \hline
+%     \end{tabular}
+%     \caption{Competences Gained During the Microcontrollers and Open Source Hardware Module}
+% \end{table}
+
+% \subsection{Analysis and remarks}
+
+% \indent \indent Ce cours était pour moi très intéressant, car il m'a permis de découvrir de découvrir de nouveaux outils tels que KiCad et NodeRed, et de les utiliser dans un proket allant de bout en bout. On est parti de la réalisation d'un capteur, jusqu'à une interface web pour visualiser les données en passant par la réalisation d'un PCB. C'était très gratifiant de voir le projet se concrétiser, et de devoir gérer son temps de travail pour arriver à tout réaliser dans les temps.
+
+% J'ai aussi apprécié de pouvoir aider mes camarades de la filière IR, qui n'avaient pas de connaissances en microcontroleurs, et qui n'étaient pas forcément très à l'aise.
+
+% Dans le cadre de ce cours, j'ai aussi pu découvrir la notion de licenses, open-source ou propriétaires, et toutes leurs implications. C'est une notion que je considère très importante, et que je n'avais pas encore eu l'occasion d'aborder dans le cadre de mes études.
+
+% J'ai aussi eu l'occasion de découvrir le fonctionnement de la gateway chirspack de l'INSA, et de ses limites, ce qui m'a poussé à utiliser ma propre gateway LoRa, elle connecté au LoRaWAN TTN.
+
+\section{Microcontrollers, Open-Source Hardware, and Sensor Introduction}
+
+\subsection{Context}
+
+\indent \indent After a week at AIME dedicated to building gas sensors, we attended classes in the physics department. These classes focused on creating the sensor's technical datasheet and sizing the components for the adaptation stage that reads the sensor values. We also received an introduction to microcontrollers, using KiCad for PCB design, and the operation of ChirpStack and NodeRed. The goal of this module was to teach us how to build a complete system from the gas sensor and its datasheet to a web user interface in NodeRed.
+
+\subsection{Technical Summary}
+
+\indent \indent Spanning several weeks, this module began with the gas sensor development week at AIME. Afterwards, we had an introduction to microcontrollers, primarily aimed at students from the IR (Computer Engineering) track, who discovered microcontrollers using Arduino boards.
+
+Since my teammate and I come from the AE (Electronics) track and were more comfortable with microcontrollers, we chose to work with an ESP8266 and connect it to INSA's LoRa network using an RN2483 module. However, this module proved to be barely functional, likely due to power supply errors made by students in previous years. Indeed, it is supposed to be powered at 3.3 V, but Arduino signals are 5 V, which damages the module in the absence of a level-shifting stage.
+
+Faced with these issues, I decided to use my own ESP32 modules, which integrate a LoRa module directly. We also encountered problems with INSA's ChirpStack gateway, which was often saturated, allowing us to send frames successfully only once in ten attempts. I therefore decided to use my own gateway, which is registered on The Things Network (TTN) and worked perfectly. Once the LoRa frames were visible on the TTN website, we used an MQ-3B sensor to simulate our gas sensor's operation.
+
+Next, we took a component-sizing course using LTSPICE, to understand our adaptation stage and correctly dimension the components.
+
+We also had an introduction to Git. This was not new to me, since I use Git in my company, but it allowed my classmates to discover this version-control tool.
+
+We then learned about MIT App Inventor, a tool for quickly building Android apps. By adding a Bluetooth module to our ESP32, we were able to control an LED from the app.
+
+We then moved on to NodeRed, a block-based programming tool that makes it very easy to create web applications. We used it to build a web interface for viewing our gas-sensor data, retrieving these data via MQTT from the TTN platform.
+
+Finally, we were introduced to KiCad, a PCB design software. We used it to create a “shield” for our ESP32, incorporating the adaptation stage for the gas sensor. Due to time constraints, I ordered the PCB from JLCPCB and assembled the components upon its arrival.
+
+You can find the entire project on my GitHub: \url{https://github.com/Raspeur/AIME_sensor}
+
+\subsection{Skills Acquired}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{3.5cm}|p{8cm}|p{3.5cm}|}
+    \hline
+    \textbf{Skill} & \textbf{Description} & \textbf{Level of Mastery} \\
+    \hline
+    Understand Microcontroller Architecture & 
+    Understanding microcontroller architectures, functionalities, and use cases. & 
+    Advanced \\
+    \hline
+    Data Acquisition System Design & 
+    Designing end-to-end data acquisition systems, including sensor selection, signal conditioning, and microcontroller integration. & 
+    Advanced \\
+    \hline
+    Sensor Signal Conditioner Circuit & 
+    Developing and simulating signal conditioning circuits to ensure accurate data acquisition. & 
+    Advanced \\
+    \hline
+    Shield Design for Gas Sensor & 
+    Designing and fabricating custom hardware expansions (shields) for proper integration of gas sensors. & 
+    Advanced \\
+    \hline
+    Sensor Software and HMI Development & 
+    Implementing embedded software solutions, including sensor drivers, data processing, and user interfaces for gas sensing applications. & 
+    Advanced \\
+    \hline
+    Smart Device Integration & 
+    Combining hardware and software components into a cohesive, fully operational IoT device. & 
+    Advanced \\
+    \hline
+    \end{tabular}
+    \caption{Skills Acquired During the Microcontrollers and Open-Source Hardware Module}
+\end{table}
+
+\subsection{Analysis and Remarks}
+
+\indent \indent This course was very interesting to me because it allowed me to discover new tools such as KiCad and NodeRed, and to use them in an end-to-end project. We went from creating a sensor all the way to a web interface for data visualization, including designing a PCB. It was very rewarding to see the project come to life and to manage our time effectively to complete everything on schedule.
+
+I also enjoyed helping classmates from the IR track, who did not have much experience with microcontrollers and were not always very comfortable with them.
+
+As part of this course, I also learned about licensing concepts whether open source or proprietary and all their implications. This is a notion I consider very important, and it was the first time I had addressed it in my studies.
+
+Finally, I got to learn more about the functioning and limitations of INSA's ChirpStack gateway, which prompted me to use my own LoRa gateway registered on the LoRaWAN TTN network.
