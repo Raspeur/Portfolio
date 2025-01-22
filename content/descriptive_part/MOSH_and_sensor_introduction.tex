@@ -90,9 +90,9 @@
 
 \indent \indent Spanning several weeks, this module began with the gas sensor development week at AIME. Afterwards, we had an introduction to microcontrollers, primarily aimed at students from the IR (Computer Engineering) track, who discovered microcontrollers using Arduino boards.
 
-Since my teammate and I come from the AE (Electronics) track and were more comfortable with microcontrollers, we chose to work with an ESP8266 and connect it to INSA's LoRa network using an RN2483 module. However, this module proved to be barely functional, likely due to power supply errors made by students in previous years. Indeed, it is supposed to be powered at 3.3 V, but Arduino signals are 5 V, which damages the module in the absence of a level-shifting stage.
+Since my teammate and I come from the AE speciality and were more comfortable with microcontrollers, we chose to work with an ESP8266 and connect it to INSA's LoRa network using an RN2483 module. However, this module proved to be barely functional, likely due to power supply errors made by students in previous years. Indeed, it is supposed to be powered at 3.3 V, but Arduino signals are 5 V, which damages the module in the absence of a level-shifting stage.
 
-Faced with these issues, I decided to use my own ESP32 modules, which integrate a LoRa module directly. We also encountered problems with INSA's ChirpStack gateway, which was often saturated, allowing us to send frames successfully only once in ten attempts. I therefore decided to use my own gateway, which is registered on The Things Network (TTN) and worked perfectly. Once the LoRa frames were visible on the TTN website, we used an MQ-3B sensor to simulate our gas sensor's operation.
+Faced with these issues, I decided to use my own ESP32 modules, which integrate a LoRa module directly. We also encountered problems with INSA's ChirpStack gateway, which was often saturated, allowing us to send frames successfully only once every ten attempts. I therefore decided to use my own gateway, which is registered on The Things Network (TTN) and worked perfectly. Once the LoRa frames were visible on the TTN website, we used an MQ-3B sensor to simulate our gas sensor's operation.
 
 Next, we took a component-sizing course using LTSPICE, to understand our adaptation stage and correctly dimension the components.
 
@@ -108,10 +108,50 @@ You can find the entire project on my GitHub: \url{https://github.com/Raspeur/AI
 
 \subsection{Skills Acquired}
 
+\begin{table}[h!]
+    \centering
+    \arrayrulecolor{black} % Defines the color of the table borders
+    \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+    \begin{tabular}{|p{11cm}|c|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Skills} & \textbf{Required} & \textbf{Achieved} \\ \hline
+    \rowcolor[gray]{0.9} \textbf{Introduction to Sensors} &  &  \\ \hline
+    Understand basic notions of sensors, data acquisition: physics, electronics and metrology point of view & 4 & 4 \\ \hline
+    Be able to manufacture a nano-particles sensor using micro-electronics tools: chemical synthesis, assembly, testing & 4 & 4 \\ \hline
+    Be able to design the datasheet of the sensor manufactured & 4 & 4 \\ \hline
+    \end{tabular}
+    \caption{Skill matrix for Introduction to Sensors}
+    \label{table:skills-intro-sensors}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \arrayrulecolor{black} % Defines the color of the table borders
+    \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+    \begin{tabular}{|p{11cm}|c|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Skills} & \textbf{Required} & \textbf{Achieved} \\ \hline
+    \rowcolor[gray]{0.9} \textbf{Microcontrollers and Open Source Hardware} &  &  \\ \hline
+    Understand microcontroller architecture and how to use them & 4 & 4 \\ \hline
+    Be able to design data acquisition system (sensor, conditioner, microcontroller) with respect to the application & 4 & 4 \\ \hline
+    Be able to design the electronic circuit of a sensor’s signal conditioner (design + simulation) & 4 & 4 \\ \hline
+    Be able to design a shield to accommodate the gas sensor & 4 & 4 \\ \hline
+    Be able to design the software to use the gas sensor and its HMI & 3 & 3 \\ \hline
+    Be able to combine all of the above mentioned components into a smart device & 4 & 4 \\ \hline
+    \end{tabular}
+    \caption{Skill matrix for Microcontrollers and Open Source Hardware}
+    \label{table:skills-microcontrollers}
+\end{table}
+
 \begin{table}[H]
     \centering
+    \arrayrulecolor{black} % Defines the color of the table borders
+    \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
     \begin{tabular}{|p{3.5cm}|p{8cm}|p{3.5cm}|}
     \hline
+    \rowcolor[gray]{0.8}
     \textbf{Skill} & \textbf{Description} & \textbf{Level of Mastery} \\
     \hline
     Understand Microcontroller Architecture & 
@@ -142,7 +182,7 @@ You can find the entire project on my GitHub: \url{https://github.com/Raspeur/AI
     \caption{Skills Acquired During the Microcontrollers and Open-Source Hardware Module}
 \end{table}
 
-\subsection{Analysis and Remarks}
+\subsection{Analysis and remarks}
 
 \indent \indent This course was very interesting to me because it allowed me to discover new tools such as KiCad and NodeRed, and to use them in an end-to-end project. We went from creating a sensor all the way to a web interface for data visualization, including designing a PCB. It was very rewarding to see the project come to life and to manage our time effectively to complete everything on schedule.
 
