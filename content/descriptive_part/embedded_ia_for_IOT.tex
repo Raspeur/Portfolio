@@ -1,1 +1,149 @@
-\section{Embedded IA for IOT}
+% \section{Embedded IA for IOT}
+% \subsection{Context} % Ajouter que j'avais déjà suivi un cours sur LinkedIn Learning de la prof de Lyon.
+% \indent \indent Le module Embedded IA for IOT, enseigné par le professeur Phillipe Leleux, est la suite d'une première introduction au machine learning que nous avons eu en 4ème année.
+% Le cours s'est concentré cette année sur l'intégration de l'intelligence artificielle (IA) dans les systèmes embarqués.
+% Le cours visait à fournir aux étudiants une compréhension globale des défis et des opportunités présentés par la combinaison de l'IA et de l'Internet des objets (IoT).
+% L'objectif principal était d'explorer comment l'IA peut être utilisée pour améliorer les capacités des systèmes embarqués, leur permettant d'effectuer des tâches complexes de manière autonome.
+
+% \subsection{Technical Summary} %= Résumé du cours
+% \indent \indent Dans ce cours, nous avons abordés des concepts théoriques et pratiques essentiels à l'intégration de l'IA dans des dispositifs contraints.
+% Nous avons notamment abordé le prétraitement des données, l'étude des caractéristiques. Ce qui inclu les techniques de réduction de la dimensionnalité, telles que l'analyse en composantes principales (PCA) ou la sélection de caractéristiques.
+% \\
+% Nous avons aussi abordé les méthodes d'analyse et de classification des données, avec notamment les algorithmes Dynamic Time Warping (DTW) et les réseaux de neurones récurrents (RNN).
+% \\
+% Nous avons abordé l'apprentissage profond, en particulier les réseaux de neurones convolutifs (CNN), qui sont adaptés aux environnements ayant des ressources limitées.
+% \\
+% Nous avons discuté sur les paradigmes d'apprentissage distribué, permettant l'apprentissage de modèles d'IA sur des appareils tout en préservant la confidentialité des données.
+% Il a mis en évidence les compromis entre l'IA basée sur le nuage, l'IA en périphérie et l'IA sur appareil en termes de bande passante, de latence et de fiabilité.
+
+% \subsection{Practical work} %= Travaux pratiques : à reformuler
+% \indent \indent Nous avons eu 2 sessions de travaux pratiques pour ce cours. Le premier TP avait pour sujet la reconaissance et la classification d'activités humaines.
+% Les données étaient colléctées par 3 capteurs, qui sont des accéléromètres, positionnés au poignet, au à la poitrine et à la cheville d'un individu.
+% Grace à ces données, nous devions classer des activités : s'asseoir, se tenir debout, marcher, faire du vélo, de la marche nordique, passer l'aspirateur et repasser.
+% Durant cette session nous avons pu mettre en application le Dynamic Time Warping (DTW), utilisé pour comparer et aligner les données de séries temporelle.
+% Puis nous avons classé les activités a l'aide des K plus proches voisins (KNN).
+% Nous avons aussi appliqué de la reduction de dimensionnalité avec l'ACP. Nous avons enfin mis en oeuvre un reseau neuronal (perceptron multicouche) pour la classification des activités.
+% Les outils que nous avons utilisés dans ce TP sont Python, scikit-learn et numpy.
+
+% Le sujet du deuxième TP était de la detection de chute à partir d'images, en se concentrant sur les techniques d'apprentissage profond.
+% L'ensemble des données était un ensemble d'images capturants différentes situations de chute.
+% Nous avons construit et entrainé un réseau neuronal convolutif (CNN) pour classer les images en 2 catégories : chute et non chute.
+% Nous avons pu appliquer des techniques de transfert d'apprentissage et d'optimisation du modèle comme la quantification et l'élaguage, afin d'améliorer l'éfficacité de notre modèle (objectif de contraintes de puissance : des petits microcontrolleurs = systèmes embarqués).
+% Les outils que nous avons découverts dans ce TP sont TensorFlow, Keras et TensorFlow Lite.
+
+% \subsection{Skills acquired} %= Compétences acquises
+
+% \begin{table}[h!]
+%     \centering
+%     \arrayrulecolor{black} % Defines the color of the table borders
+%     \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+%     \begin{tabular}{|p{11cm}|c|c|}
+%     \hline
+%     \rowcolor[gray]{0.8}
+%     \textbf{Skills} & \textbf{Required} & \textbf{Achieved} \\ \hline
+%     \rowcolor[gray]{0.9} \textbf{Embedded IA for IoT} &  &  \\ \hline
+%     Understand the characteristics of supervised and unsupervised learning problems & 4 & 4 \\ \hline
+%     Understand the main basic methods and algorithms to deal with these problems & 4 & 4 \\ \hline
+%     Understand the specificities of AI at the edge & 4 & 4 \\ \hline
+%     Understand the main optimization methods enabling the embedding of AI algorithms & 4 & 4 \\ \hline
+%     Be able to use these methods through Python libraries to solve practical problems with IoT data & 4 & 4 \\ \hline
+%     \end{tabular}
+%     \caption{Skills matrix for various software and data-related training units}
+%     \label{table:skills-embedded-ia}
+% \end{table}
+
+% \begin{table}[h!]
+%     \centering
+%     \arrayrulecolor{black} % Defines the color of the table borders
+%     \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+%     \begin{tabular}{|p{3.5cm}|p{8cm}|c|}
+%     \hline
+%         \rowcolor[gray]{0.8}
+%         \textbf{Competence} & \textbf{Description} & \textbf{Level of Mastery} \\ \hline
+%         Data Preprocessing & Cleaning, scaling, and transforming IoT data for machine learning tasks. & Advanced \\ \hline
+%         Time-Series Analysis & Classification and alignment techniques for temporal data from IoT sensors. & Intermediate \\ \hline
+%         Deep Learning for IoT & Designing and optimizing CNNs for resource-constrained environments. & Advanced \\ \hline
+%         Edge AI and Federated Learning & Implementing distributed learning paradigms while preserving privacy and improving performance. & Intermediate \\ \hline
+%         TinyML and Model Optimization & Applying pruning, quantization, and transfer learning to create lightweight AI models. & Advanced \\ \hline
+%         Python Libraries & Proficiency with TensorFlow, TensorFlow Lite, scikit-learn, and Keras for embedded AI development. & Advanced \\ \hline
+%     \end{tabular}
+%     \caption{Skills Acquired During the Embedded AI for IoT Module}
+% \end{table}
+
+% \subsection{Analysis and remarks} %= Analyse et remarques
+% Ce cours m'a beaucoup plu car il m'a permis de mieux comprendre certains des concept que j'avais découvert au cours d'une formation LinkedIn Learning réalisé par la professeur Céline Robardet de l'INSA Lyon.
+% Les travaux pratiques, en particulier le projet de detection de chute, 
+% Il était gratifiant de voir comment des techniques telles que l'optimisation CNN et l'apprentissage fédéré pouvaient être appliquées pour résoudre des problèmes IoT du monde réel.
+
+\section{Embedded AI for IoT}
+\subsection{Context}
+\indent \indent The module "Embedded AI for IoT," taught by Professor Philippe Leleux, builds upon an initial introduction to machine learning that we took during the fourth year. 
+This year, the course focused on integrating artificial intelligence (AI) into embedded systems. 
+The aim was to provide students with a comprehensive understanding of the challenges and opportunities presented by the combination of AI and the Internet of Things (IoT).
+The primary objective was to explore how AI can enhance the capabilities of embedded systems, enabling them to perform complex tasks autonomously.
+
+\subsection{Technical Summary}
+\indent \indent In this course, we covered essential theoretical and practical concepts related to integrating AI into constrained devices. 
+We studied data preprocessing and feature engineering, which included dimensionality reduction techniques such as Principal Component Analysis (PCA) and feature selection. \\
+We also explored methods for data analysis and classification, focusing on algorithms like Dynamic Time Warping (DTW) and Recurrent Neural Networks (RNNs). \\
+The course delved into deep learning, particularly Convolutional Neural Networks (CNNs), which are well-suited for resource-limited environments. \\
+We discussed distributed learning paradigms, enabling AI models to be trained on devices while preserving data privacy. 
+The trade-offs between cloud-based AI, edge AI, and on-device AI in terms of bandwidth, latency, and reliability were also highlighted.
+
+\subsection{Practical Work}
+\indent \indent We had two practical sessions for this course. The first session focused on recognizing and classifying human activities. 
+The data was collected from three sensors (accelerometers) placed on the wrist, chest, and ankle of an individual. 
+Using this data, we classified activities such as sitting, standing, walking, cycling, Nordic walking, vacuuming, and ironing.
+During this session, we implemented Dynamic Time Warping (DTW) to compare and align time-series data. 
+We then classified the activities using k-Nearest Neighbors (k-NN) and applied dimensionality reduction with PCA. 
+Finally, we implemented a neural network (multi-layer perceptron) for activity classification. 
+The tools used in this session included Python, scikit-learn, and numpy.
+
+The second practical session focused on fall detection using image data, emphasizing deep learning techniques. 
+The dataset consisted of images capturing various fall scenarios. 
+We built and trained a Convolutional Neural Network (CNN) to classify images into two categories: "fall" and "no fall." 
+We applied transfer learning and model optimization techniques, such as quantization and pruning, to improve the model's efficiency (a key consideration for constrained embedded systems such as microcontrollers). 
+The tools explored in this session included TensorFlow, Keras, and TensorFlow Lite.
+
+\subsection{Skills Acquired}
+\begin{table}[H]
+    \centering
+    \arrayrulecolor{black}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|p{11cm}|c|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Skills} & \textbf{Required} & \textbf{Achieved} \\ \hline
+    \rowcolor[gray]{0.9} \textbf{Embedded AI for IoT} &  &  \\ \hline
+    Understand the characteristics of supervised and unsupervised learning problems & 4 & 4 \\ \hline
+    Understand the main basic methods and algorithms to deal with these problems & 4 & 4 \\ \hline
+    Understand the specificities of AI at the edge & 4 & 4 \\ \hline
+    Understand the main optimization methods enabling the embedding of AI algorithms & 4 & 4 \\ \hline
+    Be able to use these methods through Python libraries to solve practical problems with IoT data & 4 & 4 \\ \hline
+    \end{tabular}
+    \caption{Skills matrix for various software and data-related training units}
+    \label{table:skills-embedded-ia}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \arrayrulecolor{black}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|p{3.5cm}|p{8cm}|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Competence} & \textbf{Description} & \textbf{Level of Mastery} \\ \hline
+    Data Preprocessing & Cleaning, scaling, and transforming IoT data for machine learning tasks. & Advanced \\ \hline
+    Time-Series Analysis & Classification and alignment techniques for temporal data from IoT sensors. & Intermediate \\ \hline
+    Deep Learning for IoT & Designing and optimizing CNNs for resource-constrained environments. & Advanced \\ \hline
+    Edge AI and Federated Learning & Implementing distributed learning paradigms while preserving privacy and improving performance. & Intermediate \\ \hline
+    TinyML and Model Optimization & Applying pruning, quantization, and transfer learning to create lightweight AI models. & Intermediate \\ \hline
+    Python Libraries & Proficiency with TensorFlow, TensorFlow Lite, scikit-learn, and Keras for embedded AI development. & Intermediate \\ \hline
+    \end{tabular}
+    \caption{Skills Acquired During the Embedded AI for IoT Module}
+\end{table}
+
+\subsection{Analysis and Remarks}
+This course was very engaging as it allowed me to better understand some of the concepts I had previously encountered during a LinkedIn Learning course by Professor Céline Robardet from INSA Lyon. 
+The practical sessions, especially the fall detection project, were particularly rewarding. 
+It was gratifying to see how techniques like CNN optimization and federated learning could be applied to solve real-world IoT problems.
