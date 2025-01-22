@@ -1,15 +1,44 @@
 \section{Energy for connected objects}
 \subsection{Context}
-\paragraph{}The "Energies for Connected Objects" course dealt with pioneering strategies to feed IoT devices without batteries or wired systems. This training focused on Ambient Energy Harvesting and Wireless Power Transfer applied to the high demand for energy-autonomous solutions in healthcare, smart cities, and environmental monitoring, among others. It brought together a multidisciplinary approach, from theoretical insights to efficient, sustainable, and reliable energy system design.
+% Le cours « Énergies pour Objets Connectés » a été donné par Gaël Loubet. Par le biais de plusieurs séances théoriques et de deux travaux pratiques, nous avons étudié les différentes solutions existantes pour alimenter des dispositifs IoT sans batterie ni câblage direct. On s'est notamment concentré sur la récupération d’énergie ambiante, au transfert d’énergie sans fil et aux moyens de rendre les systèmes véritablement autonomes en énergie.
+% En parallèle, la question de la consommation énergétique a aussi été abordée dans le cours sur les réseaux de capteurs sans fil, qui insistait sur le rôle central de la gestion de l’énergie dans le choix et l’optimisation des protocoles de communication.
 
-\subsection{Technical}
+\indent \indent The “Energies for Connected Objects” course was given by Gaël Loubet. In this course, we explored possible existing solutions for powering IoT devices without batteries or wired systems. Once the basics had been laid down, the course focused on ambient energy harvesting, wireless energy transfer and various solutions for making systems energy autonomous.
+
+This course was given in parallel with the course on wireless sensor networks, in which the issue of energy consumption was also highlighted as a decisive factor in the choice of protocol definition.
+
+\subsection{Technical Summary}
+% Au début, nous avons passé en revue les bases de l’électronique basse consommation, comme l’utilisation de condensateurs ou de supercondensateurs pour stocker l’énergie récupérée, ainsi que les différents mécanismes de transfert d’énergie sans fil, allant du transfert en champ proche (couplage capacitif et inductif) à un mode radiatif lointain via une rectenna. Nous nous sommes aussi intéressés aux techniques de récupération d’énergie ambiante (lumineuse, mécanique, thermique, ondes électromagnétiques) et aux stratégies d’optimisation. Nous avons notamment abordé la conception d’antennes adaptées à une fréquence précise ou d’optimisations logicielles pour réduire la consommation dans les objets connectés.
+% Par ailleurs, nous avons vu que dans un contexte d’IoT, il est crucial de dimensionner et d’optimiser la gestion de l’énergie, car les sources ambiantes sont souvent fluctuantes et de faible densité énergétique.
+%La récupération d’énergie étant intermittente, nous avons vu qu'un système tampon (généralement un condensateur) est nécessaire pour lisser l’alimentation et éviter les chutes de tension subites.
+
 \paragraph{}It contained discussions on capacitors and supercapacators to buffer energy, wireless power transfer that has been highly evolved with a near-field mechanism by means of capacitive and inductive coupling to a far-field radiative by the use of a rectenna, and energy harvesting techniques using ambient energy through conversion of energy due to light, mechanical motion, thermal gradient, and electromagnetic waves. The course also integrated optimization strategies, such as antenna design to match the frequency and software optimizations that would reduce energy consumption in connected devices.
 
 \subsection{Practical work}
+% Les séances de TP ont consisté à concevoir et tester des systèmes énergétiques en laboratoire. Un exercice en particulier portait sur l’alimentation d’une LED via l’énergie RF ambiante, sans batterie et uniquement grâce à une antenne.
+% Nous avons notamment fait des calculs de la consommation requise par la LED pour fonctionner à 25, 50, et 100% de sa luminosité max. Nous avons notamment découvert qu'elle consommait au maximum 40 mW, ce qui est comparable à la consommation d’un microcontrôleur tel que le ... ou le ... A partir de cette puissance, nous avons pu déterminer la capacité de stockage nécessaire pour alimenter la LED en continu.
+% Nous avons ensuite ensuite analysé un circuit redresseur, choisi des antennes adaptées, et optimisé le transfert d’énergie pour un fonctionnement efficace. Nous avons utilisé GNURadio et des cartes de test pour mesurer la puissance RF réelle émise. La stratégie « stocker puis utiliser », réalisée avec un gestionnaire de puissance bq25504 et un convertisseur DC-DC TPS63031, a permis un tamponnage et une utilisation efficace de l’énergie dans des scénarios de faible puissance.
+
 \paragraph{}The practical work for this course involved the design and testing of energy systems in the laboratory. One of the projects was to power an LED from ambient RF energy. This involved analyzing a rectifier circuit, choosing appropriate antennas, and optimizing the energy transfer for efficient operation. I used GNURadio and spectrum analyzers to measure RF power output, find the optimal operating frequencies, and test various energy storage configurations. The "store then use" strategy, as realized with a bq25504 power management unit and a TPS63031 DC-DC converter, allowed for efficient energy buffering and utilization in low-power scenarios.
 
 \subsection{Skills acquired}
 \paragraph{}In this course, I developed high-level technical expertise in low-power circuit design, energy harvesting systems, and wireless power transfer technologies. I acquired hands-on experience with laboratory tools and methodologies such as frequency sweeps, impedance matching, and antenna characterization. Beyond the technical skills, I learned to interpret complex system data and optimize designs for practical applications. The course also fostered innovative problem-solving skills, particularly in balancing theoretical frameworks with real-world constraints.
+
+\begin{table}[H]
+    \centering
+    \arrayrulecolor{black} % Defines the color of the table borders
+    \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+    \begin{tabular}{|p{11cm}|c|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Skills} & \textbf{Required} & \textbf{Achieved} \\ \hline
+    \rowcolor[gray]{0.9} \textbf{Energy for Connected Objects} &  &  \\ \hline
+    Understand and master optimisation of communication protocols for IoT with respect to energy limitations & 4 & 4 \\ \hline
+    Mastering the architecture of an energy management system, simple storage, energy recovery, know how to size the storage element according to the specifications & 4 & 4 \\ \hline
+    \end{tabular}
+    \caption{Skill matrix for Protocols and Communication}
+    \label{table:skills-iot-energy-management}
+\end{table}
 
 \subsection{Analysis and remarks}
 \paragraph{}This class demonstrated the potentials and pitfalls of designing energy-autonomous IoT devices. Even though I implemented various systems, such as the energy harvesting LED with ease, environmental inputs had high variability that posed the biggest challenges. For instance, supplying power continuously in constantly fluctuating electromagnetic environments forced me to devise creative solutions but also highlighted the necessity of using hybrid energy systems. Furthermore, a central design challenge was determining the balance between optimizing the capture of energy and reliability of the system.

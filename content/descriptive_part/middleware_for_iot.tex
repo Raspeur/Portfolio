@@ -55,18 +55,18 @@
 
 \section{Middleware for IoT}
 \subsection{Context}
-The Middleware for IoT course was taught by Professor Thierry Monteil. The main objectives of this course were to explore different approaches and communication protocols, and to understand the challenges of communication between connected devices in order to implement solutions tailored to specific needs.\\
+The Middleware for IoT course was taught by Professor Thierry Monteil. The main objectives of this course were to explore different approaches and communication protocols, and to understand the challenges of communication between connected devices in order to implement solutions tailored to specific needs.
 
-Like the course \hyperref[sec:service_architecture]{Service Architecture} taught by Ms.\ Nawal Guermouche, this course was delivered in the form of a MOOC (Massive Open Online Course). Afterwards, we carried out a series of practical exercises designed to illustrate the concepts discussed in the MOOC, notably the use of MQTT, oneM2M, and Node-RED.\\
+Like the course \hyperref[sec:service_architecture]{Service Architecture} taught by Ms.\ Nawal Guermouche, this course was delivered in the form of a MOOC (Massive Open Online Course). Afterwards, we carried out a series of practical exercises designed to illustrate the concepts discussed in the MOOC, notably the use of MQTT, oneM2M, and Node-RED.
 
 The goal of these practical sessions was to understand how multiple connected devices can interact with each other by choosing appropriate protocols, while taking into account the variety of existing hardware and software infrastructures.
 
 \subsection{Technical Summary}
-As mentioned earlier, we studied several communication protocols during this course, particularly Message Queuing Telemetry Transport (MQTT). This is a lightweight messaging protocol designed for devices with limited resources. Its functioning relies on a broker (a server) that manages publication topics. Client publishers publish messages on specific topics, and client subscribers receive messages by subscribing to these topics.\\
+As mentioned earlier, we studied several communication protocols during this course, particularly Message Queuing Telemetry Transport (MQTT). This is a lightweight messaging protocol designed for devices with limited resources. Its functioning relies on a broker (a server) that manages publication topics. Client publishers publish messages on specific topics, and client subscribers receive messages by subscribing to these topics.
 
-Thanks to its simple architecture, the MQTT protocol is widely used in IoT, where bandwidth consumption must be minimized and reliability is essential.\\
+Thanks to its simple architecture, the MQTT protocol is widely used in IoT, where bandwidth consumption must be minimized and reliability is essential.
 
-The second protocol we studied is oneM2M. More precisely, it is a standard endorsed by multiple standardization bodies, aiming to provide and ensure interoperability among IoT architectures. Based on REST, oneM2M proposes a hierarchical structure to model resources for an IoT application. The resources are organized on three levels: Application Entities (AE), Containers (CNT), and Content Instances (CI). These levels define the hierarchical storage space on servers. Application Entities (AE) represent available functionalities, within which there are Containers (CNT) that serve as data categories and Content Instances (CI) that hold published data instances.\\
+The second protocol we studied is oneM2M. More precisely, it is a standard endorsed by multiple standardization bodies, aiming to provide and ensure interoperability among IoT architectures. Based on REST, oneM2M proposes a hierarchical structure to model resources for an IoT application. The resources are organized on three levels: Application Entities (AE), Containers (CNT), and Content Instances (CI). These levels define the hierarchical storage space on servers. Application Entities (AE) represent available functionalities, within which there are Containers (CNT) that serve as data categories and Content Instances (CI) that hold published data instances.
 
 Thus, it is through a container in an AE that an IoT device can publish or read information.
 
@@ -80,10 +80,32 @@ Only after mastering these concepts did we use a oneM2M server and a Python scri
 Had we had more time for this project, I would have liked to integrate Node-RED to more easily manage data flows among the various IoT devices. Node-RED would have provided a visual interface to intuitively connect hardware devices, APIs, and online services.
 
 \subsection{Skills Acquired}
+
+\begin{table}[h!]
+    \centering
+    \arrayrulecolor{black} % Defines the color of the table borders
+    \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+    \begin{tabular}{|p{11cm}|c|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Skills} & \textbf{Required} & \textbf{Achieved} \\ \hline
+    Know how to situate the main standards for the Internet of Things & 4 & 4 \\ \hline
+    Deploy an architecture compliant to an IoT standard and implement a sensor network & 4 & 4 \\ \hline
+    Deploy and configure an IoT architecture using OM2M & 4 & 4 \\ \hline
+    Interact with the different resources of the architecture using REST services & 4 & 4 \\ \hline
+    Integrate a new technology into the deployed architecture & 4 & 4 \\ \hline
+    \end{tabular}
+    \caption{Skill matrix for Middleware for the Internet of Things}
+    \label{table:skills-middleware-iot}
+\end{table}
+
 \begin{table}[H]
     \centering
-    \begin{tabular}{|p{3.5cm}|p{8cm}|p{3.5cm}|}
+    \arrayrulecolor{black} % Defines the color of the table borders
+    \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+    \begin{tabular}{|>{\raggedright}p{3.5cm}|p{8cm}|c|}
     \hline
+    \rowcolor[gray]{0.8}
     \textbf{Skill} & \textbf{Description} & \textbf{Level of Mastery} \\
     \hline
     Situate IoT Standards & Know how to position the main standards for the Internet of Things & Advanced \\

@@ -7,7 +7,7 @@ The second part of the course followed different approach, where students were t
 
 \subsection{Technical}  
 
-\indent \indent In this course I discovered the unique specifications of WSN protocols such as Zigbee and Bluetooth, and how they differ from the traditional networks.  One of the key focus was on the critical requirement for low power consumption, as many WSN nodes are restricted energy environment. One of the most common energy-saving strategies involves inactive and sleep period time.
+\indent \indent In this course I discovered the unique specifications of WSN protocols such as Zigbee and Bluetooth Low Energy (BLE), and how they differ from the traditional networks.  One of the key focus was on the critical requirement for low power consumption, as many WSN nodes are restricted energy environment. One of the most common energy-saving strategies involves inactive and sleep period time.
 \smallskip
 In the second assignment, we explored various Medium Access Control (MAC) layer protocols, which play a vital role in WSN efficiency. We can  broadly classified them into three categories:
 
@@ -27,24 +27,41 @@ As part of this course, I worked on a project where my group and I designed a pr
 
 For this project, we developed a new MAC protocol called 3N-MAC (Near Node Network for Wireless Sensor Networks). My role in the project focused on the implementation of the physical layer, with my teamates Paul Jaulhiac and Cyril Vasseur. We used GNU Radio to implement and test the physical layer, ensuring robust and reliable signal transmission despite the challenging environment. This hands-on experience allowed me to understand how the physical and MAC layers interact and the complexities involved in designing a system that balances energy efficiency, reliability, and performance.
 
-\subsection{Practical work}
 \subsection{Skills acquired}
 Through this course, its research part, and the labs, I consider to have acquired the following skills:
-\begin{itemize}
-    \item \textbf{Protocol Analysis and Design:} Understanding and evaluating the trade-offs between different WSN MAC protocols to design networks tailored to specific application requirements (Being able to suggest optimal technological solutions for  IoT networks).
-    \item \textbf{Simulation and Evaluation:} Using simulation tools to model and assess network performance under diverse environmental and operational constraints.
-    \item \textbf{Energy Optimization:} Developing strategies to balance energy efficiency and communication reliability in WSNs.
-    \item \textbf{Critical Comparison:} Comparing and selecting the most suitable protocols for various IoT applications based on factors such as energy efficiency, scalability, and reliability (Being able to analyze and evaluate optimal wireless network technologies).
-    \item \textbf{Problem Solving in Constrained Environments:} Designing practical solutions for challenging real-world scenarios, such as our sewer pipe monitoring project.
-\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \arrayrulecolor{black} % Defines the color of the table borders
+    \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+    \begin{tabular}{|p{3.5cm}|p{8.5cm}|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Skill} & \textbf{Description} & \textbf{Level of Mastery} \\
+    \hline
+    Protocol Analysis and Design & Understanding and evaluating the trade-offs between different WSN MAC protocols to design networks tailored to specific application requirements. (Being able to suggest optimal technological solutions for IoT networks) & Advanced \\
+    \hline
+    Simulation and Evaluation & Using simulation tools to model and assess network performance under diverse environmental and operational constraints. & Intermediate \\
+    \hline
+    Energy Optimization & Developing strategies to balance energy efficiency and communication reliability in WSNs. & Advanced \\
+    \hline
+    Critical Comparison & Comparing and selecting the most suitable protocols for various IoT applications based on factors such as energy efficiency, scalability, and reliability. (Being able to analyze and evaluate optimal wireless network technologies) & Advanced \\
+    \hline
+    Problem Solving in Constrained Environments & Designing practical solutions for challenging real-world scenarios, such as our sewer pipe monitoring project. & Intermediate \\
+    \hline
+    \end{tabular}
+    \caption{Wireless Sensor Networks Skills}
+    \label{tab:wsn_skills}
+\end{table}
 
 \subsection{Analysis and remarks}
 
 \indent \indent Throughout this course, I realized how critical it is to select the right protocol when designing a Wireless Sensor Network (WSN). Each protocol has its own strengths and trade-offs, making it essential to align the choice with the specific requirements of the application.
 
-For example, protocols like S-MAC and T-MAC are excellent for conserving energy, but their reliance on synchronization and inability to handle mobility well make them better suited for static networks with moderate traffic. On the other hand, Z-MAC stood out for its hybrid approach, which balances energy efficiency and throughput by adapting to traffic levels. However, I noticed that Z-MAC’s reliance on global synchronization can be a challenge in highly dynamic environments.
+For example, protocols like S-MAC and T-MAC are excellent for conserving energy, but their reliance on synchronization and inability to handle mobility well make them better suited for static networks with moderate traffic. On the other hand, Z-MAC stood out for its hybrid approach, which balances energy efficiency and throughput by adapting to traffic levels. However, I noticed that Z-MAC's reliance on global synchronization can be a challenge in highly dynamic environments.
 
-Working on our project also helped me understand the practical challenges of deploying WSNs in constrained environments. For our sewer pipe monitoring system, we needed to balance low energy consumption, reliability, and scalability. While designing the 3N-MAC protocol, I gained hands-on experience in tailoring a solution to meet the specific demands of the application. However, one major difficulty was the implementation of the physical layer using GNU Radio. Although we had a brief introduction to the software, it was not sufficient to fully understand how to implement a working physical layer. For future projects, I think it would be extremely useful to have more detailed guidance or tutorials on how to use tools like GNU Radio to implement protocols effectively.
+Working on our project also helped me understand the practical challenges of deploying WSNs in constrained environments. For our sewer pipe monitoring system, we needed to balance low energy consumption, reliability, and scalability. While designing the 3N-MAC protocol, I gained hands-on experience in tailoring a solution to meet the specific demands of the application. However, one major difficulty was the implementation of the physical layer using GNU Radio.
+Although we had a brief introduction to the software, it was not sufficient to fully understand how to implement a working physical layer. For future projects, I think it would be extremely useful to have more detailed guidance or tutorials on how to use GNU Radio to implement protocols effectively.
 \\
 \\
 \indent Another takeaway from this course is that there is no one-size-fits-all solution for WSNs. For instance, energy-efficient protocols like B-MAC are ideal for low-traffic applications but can introduce delays or lack features like synchronization. Similarly, location-based protocols like GAF are great for dynamic networks but require accurate localization, which can complicate the deployment.
