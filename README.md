@@ -6,7 +6,7 @@ Welcome to my GitHub portfolio! I am Clément Gauché, a fifth-year engineering 
 
 This repository contains a detailed breakdown of my academic and professional journey. It includes the following:
 
-### 1. **Portfolio: Analysis and Reflection**
+### 1. **[Portfolio](./Portfolio.pdf): Analysis and Reflection**
    - A comprehensive reflection on the subjects I have studied, exploring how each course has contributed to my professional development.
    - For each course, you will find:
      - **Context**: The objectives, methodologies, and focus areas.
@@ -20,11 +20,11 @@ This repository contains a detailed breakdown of my academic and professional jo
      - **WISPERS Project**: Wireless data transmission solutions for intracranial pressure monitoring.
    - Technical documentation, code samples, and outcomes of these projects.
 
-### 3. **Technical Reports**
+### 3. **[Technical Reports](./Reports/)**
    - Reports showcasing my work on specific assignments, projects, and internships.
    - Topics range from driver development for microcontrollers to the implementation of secure software solutions.
 
-### 4. **Resume and Certifications**
+### 4. **[Resume](./CV_Clément_Gauché_ISS.pdf) and Certifications**
    - My latest CV is included, outlining my education, skills, certifications (e.g., TOEIC), and professional experience.
 
 ## Why I Chose INSA Toulouse, ISS, and My Future Aspirations
