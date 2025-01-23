@@ -1,7 +1,7 @@
 \section{Cloud and Edge Computing}
 \subsection{Context}
 %Le cours sur le Cloud and Edge Computing a été le premier cours que j'ai eu en 5ISS. Il introduit les concepts clés de l'informatique distribuée et omniprésente. Il met en lumière des architectures telles que le « Service Oriented Computing (SOC) », la virtualisation, ou encore le rôle des technologies cloud dans le développement de l'informatique omniprésente et utilitaire.
-\indent \indent Among the first courses I came across during my final year at 5ISS was Cloud and Edge Computing. This course introduced me to core concepts of both distributed and pervasive computing together with the analysis of a basic architecture that included techniques of Service Oriented Computing (SOC), virtualization techniques, and cloud technologies as enablers of utility and ubiquitous computing. By nature, the course had both a theoretical and hands-on combination that gave an insight into how such paradigms shape the current IT systems and their applications.
+\indent \indent Among the first courses I came across during my final year at 5ISS was Cloud and Edge Computing. This course introduced me to core concepts of both distributed and pervasive computing together with the analysis of a basic architecture that included techniques of Service Oriented Computing (SOC), virtualization techniques, and cloud technologies as enablers of utility and pervasive computing. By nature, the course had both a theoretical and hands-on combination that gave me an insight into how such paradigms shape the current IT systems and their applications.
 
 \subsection{Technical Summary} % = synthèse du cours
 %- Virtualization: Concepts, hypervisors (Type 1 and 2), paravirtualization, containerization, and VM templates. \\
@@ -15,14 +15,22 @@
 \indent \indent Virtualization has been amply covered in class. To be more specific, we discovered the different types of it: hypervisors, Type 1 and 2, paravirtualization, and containerization. We have also considered Virtual Machine Templates, which strongly ease virtual environments management and deployment. A specific highlight was the comparison between service orchestration and service choreography, where we analyzed the strengths and limitations of each. While orchestration does indeed ease updates by adopting a centralized approach, it tends to make the system slower. On the other hand, choreography is decentralized, enhancing autonomy but with a very painstaking design process. The choice between them is necessarily dependent on the specific contexts of development and economics in which they are applied.\\
 \vspace{0.25cm}
 
-Another important area discussed in this course was cloud computing: a discussion of definitions, among them the widely recognized framework from NIST, but also established its core characteristics. On-demand service provision, scalability, pay-per-use, and supply of services in models like IaaS, PaaS, and SaaS-all these form key elements that make cloud computing. We also looked at edge computing, which is integral to the IoT ecosystem, and allows for latency reduction and ensures data sovereignty. However, this also presents challenges of connectivity and the processing power of the edge devices. Finally, we discussed fog computing: an intermediary layer that connects cloud services with data sources, reducing the distance data needs to travel, and allowing real-time interaction. This was aptly referred to as the process of "cloudifying the IoT world."
+The course also emphasized cloud computing by exploring definitions, including the widely recognized NIST framework, while identifying its core characteristics. We also looked at on-demand services, scalability, pay-per-use models and the delivery of services through models such as Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS) and Software-as-a-Service (SaaS). 
+Additionally, we examined edge computing and its integral role in IoT ecosystems, highlighting its ability to reduce latency and uphold data sovereignty. However, this approach also comes with challenges, such as connectivity limitations and the constrained processing power of edge devices. And finally, we addressed fog computing as an intermediary layer that bridges cloud services with data sources, reducing the distance data must travel and enabling real-time interaction. \\
+The professor defined this concept as a process of “cloudification of the IoT world”.
 
 \subsection{Practical work}
 %La partie pratique s'est organisée en 2 TP, un sur la découverte des Cloud Hypervisors et l'autre sur l'orchestration de services dans un environnement hybride cloud/edge. Ces TP m'ont permis d'approfondir mes connaissances des concepts et des technologies utilisées dans les différentes techniques de virtualisation.
-\indent \indent The practical work for this course was divided into two major sessions, each designed to reinforce the theoretical aspects covered in class. In the first session, we explored cloud hypervisors by engaging with tools such as VirtualBox and the OpenStack API. This practical session allowed me to experiment with various virtualization techniques and understand their implementation in controlled environments. The second session was on service orchestration in hybrid cloud and edge environments. In that exercise, I learned the deployment and management of a distributed system operating across these two architectures, thus providing insights into their complexities and potential.
+\indent \indent The practical work for this course was divided into two major sessions, each designed to reinforce the theoretical aspects covered in class. In the first session, we explored cloud hypervisors by engaging with tools such as VirtualBox and the OpenStack API. This practical session allowed me to experiment with various virtualization techniques and understand their implementation in controlled environments.
 \vspace{0.25cm}
 
-These practical sessions were crucial for bridging the gaps in theory into applications. These have provided a chance not only to comprehend the conceptual aspects but also to apply the same in realistic scenarios. This solidifies my comprehension and confidence in handling Hybrid Architectures.
+The second session was on service orchestration in hybrid cloud and edge environments. In that exercise, I learned the deployment and management of a distributed system operating across these two architectures, thus providing insights into their complexities and potential.
+\vspace{0.25cm}
+
+These practical sessions were crucial for bridging the gaps in theory into applications. They provided me the chance not only to comprehend the conceptual aspects but also to apply the same in realistic scenarios. This solidifies my comprehension and confidence in handling Hybrid Architectures.
+\vspace{0.25cm}
+
+\noindent You can find the reports of these labs in the appendix (\href{https://github.com/Raspeur/Portfolio/tree/main/Reports}{Reports folder}).
 
 \subsection{Skills acquired}
 %- Proficiency in cloud and edge computing architecture design. \\
@@ -30,11 +38,55 @@ These practical sessions were crucial for bridging the gaps in theory into appli
 %- Expertise in deploying services using container orchestration platforms like Kubernetes. \\
 %- The ability to design resilient and low-latency systems tailored for IoT and distributed scenarios. \\
 %- Insight into handling edge node variability, ensuring service continuity despite real-time disruptions.
-\indent \indent The course really enhanced my technical capability and comprehension of Distributed Systems. Cloud and Edge computing architectures focusing on high performance and dependability. My experience with VirtualBox and OpenStack gave me hands-on experience in creating and managing virtual environments: virtual machines and containers. This also includes the development of expertise in deploying and orchestrating containerized services through the use of platforms like Kubernetes, which is critical in modern-day designing of distributed systems. The course enhanced my system design skills for low latency and high resilience, particularly in IoT and Distributed Environments. Apart from that, I learned real-time disruption management at the edge and continuity of service, despite variability in edge nodes.
+%\indent \indent The course really enhanced my technical capability and comprehension of Distributed Systems. Cloud and Edge computing architectures focusing on high performance and dependability. My experience with VirtualBox and OpenStack gave me hands-on experience in creating and managing virtual environments: virtual machines and containers. This also includes the development of expertise in deploying and orchestrating containerized services through the use of platforms like Kubernetes, which is critical in modern-day designing of distributed systems. The course enhanced my system design skills for low latency and high resilience, particularly in IoT and Distributed Environments. Apart from that, I learned real-time disruption management at the edge and continuity of service, despite variability in edge nodes.
+
+\begin{table}[H]
+    \centering
+    \arrayrulecolor{black} % Sets the border color of the table
+    \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing of rows
+    \begin{tabular}{|p{11cm}|c|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Skills} & \textbf{Required} & \textbf{Achieved} \\ \hline
+    \rowcolor[gray]{0.9} \textbf{Cloud and Autonomic Computing} &  &  \\ \hline
+    Understand the concept of cloud computing & 3 & 3 \\ \hline
+    Use a IaaS-type cloud service & 3 & 3 \\ \hline
+    Deploy and adapt a cloud-based platform for IoT & 3 & 3 \\ \hline
+    \end{tabular}
+    \caption{Skill matrix for Cloud and Autonomic Computing}
+    \label{table:skills_for_cloud_and_autonomic_computing}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \arrayrulecolor{black}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|p{3.5cm}|p{8cm}|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Competence} & \textbf{Description} & \textbf{Level of Mastery} \\
+    \hline
+    Designing Cloud and Edge Architectures & Understanding of distributed and cloud architectures, with a focus on performance, scalability, and reliability in hybrid environments. & Intermediate \\
+    \hline
+    Virtualization Tools and Environments & Creation and management of VMs and containers using platforms such as VirtualBox and the OpenStack API. & Advanced \\
+    \hline
+    Container Orchestration & Deploying services on container orchestration platforms like Kubernetes, and ensuring efficient scaling and fault tolerance. & Intermediate \\
+    \hline
+    Resilient Systems for IoT & Ability to design systems that maintain low latency, high availability, and robust security, tailored for IoT and distributed scenarios. & Intermediate \\
+    \hline
+    Service Continuity at the Edge & Adept at managing edge node variability, handling real-time disruptions, and ensuring uninterrupted service delivery. & Intermediate \\
+    \hline
+    \end{tabular}
+    \caption{Skills Acquired in Cloud and Edge Computing}
+\end{table}
+
 
 \subsection{Analysis and remarks}
 %Le format des TP est pour moi très intérressant car étant divisé en une partie théorique, permettant de fixer les concepts essentiels du cours en début de TP, accompagné d'une partie pratique, manipulation Virtual Box et l'API OpenStack, tout en permettant de mettre en application ces concepts de cours.
-\indent \indent One of the strong points of this course is the structuring of the practical sessions, which did combine theory and practice quite nicely. Each session started with a theoretical introduction to reinforce the central concepts of the course; we then had to go through an implementation phase by putting these ideas into practice with tools such as VirtualBox and OpenStack APIs. In this way, both my understanding was solidly shaped and practical skills were gained; hence, learning has been both engaging and very effective. I found this format particularly enriching because it mirrors real-world workflows, where a deep understanding of concepts must complement practical expertise.
+\indent \indent What I liked about this course was the structuring of the practical sessions, which combined theory and practice quite well. Each session began with a theoretical introduction to reinforce the central concepts of the course. We then had to go through an implementation phase, putting these ideas into practice with tools such as VirtualBox and OpenStack APIs. In this way, my understanding of the course was reinforced and I was able to acquire “concrete” practical skills. I found this format particularly rewarding because it reflects real-world workflows, where a thorough understanding of concepts must complement practical expertise.
 
 \subsection{Reflections}
-\indent \indent This course gave me a better understanding of the interaction between cloud and edge computing systems and how they enable innovative, scalable, and efficient solutions. The smooth integration of theoretical and practical aspects has prepared me for the challenges of designing and managing distributed systems in professional life. In this learning process, I developed not only my technical skills but also the problem-solving approach needed to handle modern IT system complexities.
+\indent \indent This course gave me a better understanding of the interaction between cloud and edge computing systems and how they enable innovative, scalable, and efficient solutions. The smooth integration of theoretical and practical aspects has prepared me for the challenges of analysing the design and the management of distributed systems. As I plan to pursue a specialized master's degree in cybersecurity, I recognize the value of understanding virtualization, container orchestration, and hybrid architectures in designing robust defenses against emerging threats.
+\\
+
+Through the labs of this course, I can say that I developed not only my technical skills but also my critical thinking and problem-solving skills, both of which are I think important for my future career in cybersecurity.

@@ -1,15 +1,18 @@
 \section{Wireless Sensor Networks}
 \subsection{Context}
-\indent \indent Wireless sensor networks (WSNs) are to me an essential part of the development of intelligent, interconnected systems such as the Internet of Things (IoT). These networks consist of spatially distributed sensor nodes that monitor physical or environmental conditions and relay the data wirelessly for analysis. Unlike traditional networks, WSNs prioritize energy efficiency, robustness, and scalability due to the constrained nature of their hardware and the challenging environments in which they often operate.
+\indent \indent Wireless Sensor Networks (WSNs) play an essential role in the development of intelligent, interconnected systems known as the Internet of Things (IoT). Unlike traditional networks, WSNs prioritize energy efficiency, robustness and scalability due to the limited nature of their hardware and the harsh environments in which they often operate.
+\vspace{0.25cm}
 
-The course on WSNs, taught by the Professor Daniela Dragomirescu, emphasizes the importance of balancing cost, energy efficiency, lifetime, and ease of deployment when designing such systems. It introduces me to the trade-offs involved in protocol design, from the physical layer to the application one, with a focus on practical deployment strategies and performance optimization.
-The second part of the course followed different approach, where students were tasked with presenting a detailed analysis of specific protocols for WSNs. My group focused on LoRa, while other groups presented on Sigfox, BLE, ZigBee, NB-IoT (5G), and M2M (5G) protocols.
+The course was taught by the Professor Daniela Dragomirescu, and emphasizes the importance of balancing cost, energy efficiency, lifetime, and ease of deployment when designing such systems. It introduces me to the trade-offs involved in protocol design, from the physical layer to the application one, with a focus on practical deployment strategies and performance optimization.
+\\
+The second part of the course followed a different approach, where students were tasked with presenting a detailed analysis of specific protocols for WSNs. My group focused on LoRa, while other groups presented on Sigfox, BLE, ZigBee, NB-IoT, and M2M protocols.
 
-\subsection{Technical}  
+\subsection{Technical Summary}  
 
-\indent \indent In this course I discovered the unique specifications of WSN protocols such as Zigbee and Bluetooth Low Energy (BLE), and how they differ from the traditional networks.  One of the key focus was on the critical requirement for low power consumption, as many WSN nodes are restricted energy environment. One of the most common energy-saving strategies involves inactive and sleep period time.
-\smallskip
-In the second assignment, we explored various Medium Access Control (MAC) layer protocols, which play a vital role in WSN efficiency. We can  broadly classified them into three categories:
+\indent \indent In this course I discovered the unique specifications of WSN protocols such as Zigbee and Bluetooth Low Energy (BLE), and how they differ from the traditional networks.  One of the key focus was on the critical requirement for low power consumption, as many WSN nodes are in a restricted energy environment. One of the most common energy-saving strategies involves inactive and sleep period time.
+\vspace{0.25cm}
+
+\noindent In the second assignment, we explored various Medium Access Control (MAC) layer protocols, which play a vital role in WSN efficiency. We can  broadly classified them into three categories:
 
 \begin{itemize}
     \item \textbf{Contention-based protocols:} Nodes transmit data when the communication medium is free. This approach, often implemented using Carrier Sense Multiple Access with Collision Avoidance (CSMA/CA), is simple but can lead to collisions in high-traffic scenarios.
@@ -17,7 +20,8 @@ In the second assignment, we explored various Medium Access Control (MAC) layer 
     \item \textbf{Hybrid protocols:} These combine features of both contention-based and scheduled-based approaches. For example, Zigbee uses a hybrid MAC layer, with part of its superframe dedicated to contention-based access and another part reserved for scheduled transmissions.
 \end{itemize}
 
-As part of this course, I worked on a project where my group and I designed a protocol for a real-world application in a constrained environment. In a specific topic: public sewer pipes. The objective was to deploy multiple sensors along the sewer pipelines to monitor their conditions. This challenging environment required a protocol that could meet several specific constraints:
+\subsection{Practical Work}
+\indent \indent As part of this course, I worked on a project where my group and I designed a protocol for a real-world application in a constrained environment. In a specific topic: public sewer pipes. The objective was to deploy multiple sensors along the sewer pipelines to monitor their conditions. This challenging environment required a protocol that could meet several specific constraints:
 
 \begin{itemize}
     \item \textbf{Low energy consumption:} Essential for ensuring long-term operation.
@@ -57,13 +61,13 @@ Through this course, its research part, and the labs, I consider to have acquire
 \subsection{Analysis and remarks}
 
 \indent \indent Throughout this course, I realized how critical it is to select the right protocol when designing a Wireless Sensor Network (WSN). Each protocol has its own strengths and trade-offs, making it essential to align the choice with the specific requirements of the application.
-
 For example, protocols like S-MAC and T-MAC are excellent for conserving energy, but their reliance on synchronization and inability to handle mobility well make them better suited for static networks with moderate traffic. On the other hand, Z-MAC stood out for its hybrid approach, which balances energy efficiency and throughput by adapting to traffic levels. However, I noticed that Z-MAC's reliance on global synchronization can be a challenge in highly dynamic environments.
+\vspace{0.25cm}
 
-Working on our project also helped me understand the practical challenges of deploying WSNs in constrained environments. For our sewer pipe monitoring system, we needed to balance low energy consumption, reliability, and scalability. While designing the 3N-MAC protocol, I gained hands-on experience in tailoring a solution to meet the specific demands of the application. However, one major difficulty was the implementation of the physical layer using GNU Radio.
-Although we had a brief introduction to the software, it was not sufficient to fully understand how to implement a working physical layer. For future projects, I think it would be extremely useful to have more detailed guidance or tutorials on how to use GNU Radio to implement protocols effectively.
-\\
-\\
-\indent Another takeaway from this course is that there is no one-size-fits-all solution for WSNs. For instance, energy-efficient protocols like B-MAC are ideal for low-traffic applications but can introduce delays or lack features like synchronization. Similarly, location-based protocols like GAF are great for dynamic networks but require accurate localization, which can complicate the deployment.
+Working on the sewer pipe monitoring project helped me understand the practical challenges of deploying WSNs in constrained environments. While designing the 3N-MAC protocol, I gained hands-on experience in tailoring solutions to meet the specific demands of the application. However, the lack of detailed instruction on GNU Radio implementation hindered our progress in building a fully functional physical layer. I think that training on tools such as GNU Radio upstream of the project would have enabled us to be much more efficient.
+\vspace{0.25cm}
+
+Another important takeaway is that no single protocol is universally ideal for all WSN applications. For instance, energy-efficient protocols like B-MAC are great for low-traffic applications but may introduce delays or lack synchronization features. Similarly, location-based protocols like GAF are excellent for dynamic networks but rely on accurate localization, which can complicate deployment.
+\vspace{0.25cm}
 
 Overall, this course has deepened my understanding of the complexities involved in WSN design and deployment. It highlighted the importance of making informed trade-offs based on the specific needs of the application and provided me with a strong foundation to approach similar challenges in the future. The hands-on project reinforced the theoretical knowledge, but with more practical training on software tools, I believe I could have gained even more from the experience.

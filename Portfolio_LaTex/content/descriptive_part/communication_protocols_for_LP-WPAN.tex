@@ -4,33 +4,32 @@
 %The objective of this course is to discover a specific TCP/IP protocol stack for LP-WPAN.
 %With the training of ISS centered on IoT, it is very interesting to see an example of implementation a sensor network protocol stack.
 
-\indent \indent The LP-WPAN module, part of the IoT network architecture course, provided an in-depth understanding of low-power, short-range wireless communication technologies tailored for constrained IoT devices.
-The focus was on IEEE 802.15.4, which serves as a foundation for many IoT protocols like Zigbee, 6LoWPAN, and Thread.
-This standard facilitates the communication of devices with limited resources, such as sensors and actuators in smart homes, industrial monitoring, and environmental applications.
-
+\indent \indent This module provided an in-depth understanding of low-power, short-range wireless communication technologies specifically designed for constrained IoT devices. The focus was primarily on IEEE 802.15.4, a foundational standard for several IoT protocols, including Zigbee and 6LoWPAN, enabling efficient and reliable communication in resource-limited environments.
 \vspace{0.25cm}
-\indent Throughout this course, I explored the intricacies of LP-WPAN, including its architecture, challenges, and specific adaptations for IoT networks.
-The emphasis on constrained environments—characterized by low bandwidth, high energy efficiency, and dynamic topologies—highlighted the unique challenges of enabling reliable and scalable IoT communications.
 
-\vspace{0.25cm}
-\indent This module provided me with a solid theoretical foundation and hands-on experience in designing and evaluating LP-WPAN technologies, especially in the context of IPv6 adaptation.
+Additionally, the course emphasized the integration of IPv6 in IoT networks, highlighting its vast benefits such as scalability, address space expansion, and compatibility with IoT-specific protocols. The practical sessions and theoretical discussions explored IPv6 implementation challenges and solutions, particularly its adaptation for constrained networks using 6LoWPAN and routing protocols like RPL. This dual focus on LP-WPAN and IPv6 provided a comprehensive perspective on modern IoT communication architectures.
 
 \subsection{Technical Summary}
-\indent \indent The technical aspect of this module revolved around the design, characteristics, and operation of LP-WPAN networks and their interplay with the IPv6 protocol.
-Several key concepts were covered:
+% \indent \indent Ce cours s'est concentré sur la conception et la mise en œuvre de communications basée sur IPv6 dans les réseaux IoT, en mettant l'accent sur son adaptation à des environnements contraignants tels que les LP-WPAN. Le cours a commencé par explorer les caractéristiques uniques des réseaux IoT, telles que leur évolutivité, leur efficacité énergétique et leur dépendance à l'égard de protocoles spécialisés tels que l'IEEE 802.15.4. Ces caractéristiques distinguent les réseaux IoT des réseaux informatiques traditionnels et nécessitent des solutions adaptées pour les appareils de faible puissance fonctionnant dans des conditions dynamiques et souvent avec perte.
+% \vspace{0.25cm}
 
-\subsubsection{IoT Network Characteristics and Specificities}
-\indent \indent LP-WPANs are constrained by low power, small frame sizes (127 bytes max), and low data rates (up to 250 kbps).
-Networks are scalable, supporting dynamic addition and removal of devices, and rely on protocols like IEEE 802.15.4 for physical and MAC layers.
-Energy efficiency is a key focus, with devices often operating in low-power or sleep modes.
+% L'adoption de l'IPv6 dans les systèmes IoT était un point essentiel. IPv6 offre un vaste espace d'adressage, supportant des milliards d'appareils avec des adresses uniques et permettant une communication directe de bout en bout sans besoin de NAT. Des séances de TP ont démontré les étapes d'initialisation de l'IPv6, y compris l'auto-configuration des adresses à l'aide des adresses MAC, le processus de détection des adresses dupliquées (DAD) et le protocole de découverte des voisins (NDP). Ces mécanismes sont cruciaux pour l'intégration dynamique des "nodes" dans les réseaux IoT.
+% \vspace{0.25cm}
 
-Rationale for Adopting IPv6
-IPv6 Basics
-IPv6 Adaptation for IoT Networks
-IETF IPv6-Based Stack for IoT
-Existing IPv6-Based Network Technologies for IoT
-Relevance of IPv6 in the Semester Project
-IoT and Sustainability
+% Pour de limiter et même réduire la surcharge des en-têtes IPv6 dans les réseaux à ressources limitées, le cours a introduit le protocole 6LoWPAN. Ce protocole compresse les en-têtes IPv6, réduisant ainsi de manière significative la taille des données pour les adapter aux tailles de trame limitées de l'IEEE 802.15.4. En outre, le protocole RPL (Routing Protocol for Low-Power and Lossy Networks) a été étudié en tant que solution pour un routage multi-saut efficace. La combinaison de 6LoWPAN et de RPL, dans le cadre de la pile de protocoles IoT normalisée de l'IETF, garantit une communication économe en énergie, évolutive et fiable dans les réseaux IoT.
+% \vspace{0.25cm}
+
+% Dans ce cours nous avons également examiné les technologies IoT existantes basées sur IPv6, notamment Thread pour les maisons intelligentes, LTE-M pour la mobilité à grande échelle et Zigbee IP pour l'automatisation des bâtiments. Chaque technologie a démontré l'application pratique d'IPv6 dans des scénarios IoT du monde réel. Ces discussions ont mis en évidence la pertinence d'IPv6 pour les applications IdO modernes, notamment son potentiel d'amélioration de l'évolutivité et de la modularité dans des projets tels que Wispers, même lorsqu'ils sont confrontés à des contraintes de transmission à basse fréquence.
+\indent \indent This course focused on the design and implementation of IPv6-based communications in IoT networks, emphasizing its adaptation to constrained environments such as LP-WPAN. The course began by exploring the unique characteristics of IoT networks, such as scalability, energy efficiency, and reliance on specialized protocols like IEEE 802.15.4. These characteristics set IoT networks apart from traditional computer networks and require tailored solutions for low-power devices operating under dynamic and often lossy conditions.
+\vspace{0.25cm}
+
+The adoption of IPv6 in IoT systems was a key focus. IPv6 provides a vast addressing space, supporting billions of devices with unique addresses and enabling direct end-to-end communication without the need for NAT. Practical lab sessions demonstrated the steps involved in initializing IPv6, including address auto-configuration using MAC addresses, the Duplicate Address Detection (DAD) process, and the Neighbor Discovery Protocol (NDP). These mechanisms are crucial for the dynamic integration of nodes into IoT networks.
+\vspace{0.25cm}
+
+To limit and even reduce IPv6 header overhead in resource-constrained networks, the course introduced the 6LoWPAN protocol. This protocol compresses IPv6 headers, significantly reducing data size to fit the limited frame sizes of IEEE 802.15.4. Additionally, the RPL (Routing Protocol for Low-Power and Lossy Networks) was studied as a solution for efficient multi-hop routing. The combination of 6LoWPAN and RPL, within the IETF standardized IoT protocol stack, ensures energy-efficient, scalable, and reliable communication in IoT networks.
+\vspace{0.25cm}
+
+The course also examined existing IPv6-based IoT technologies, including Thread for smart homes, LTE-M for large-scale mobility, and Zigbee IP for building automation. Each technology demonstrated the practical application of IPv6 in real-world IoT scenarios. These discussions highlighted the relevance of IPv6 for modern IoT applications, particularly its potential to enhance scalability and modularity in projects like Wispers, even when faced with low-frequency transmission constraints.
 
 \subsection{Practical Work}
 \indent \indent The practical sessions provided hands-on experience with LP-WPAN technologies, focusing on configuring IPv6 and 6LoWPAN.
@@ -48,7 +47,7 @@ By examining DODAG formations and routing tables, we gained a practical understa
 
 \subsection{Skills acquired}
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \arrayrulecolor{black} % Defines the color of the table borders
     \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows

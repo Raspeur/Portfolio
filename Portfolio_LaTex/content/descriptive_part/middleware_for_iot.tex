@@ -63,11 +63,10 @@ The goal of these practical sessions was to understand how multiple connected de
 
 \subsection{Technical Summary}
 As mentioned earlier, we studied several communication protocols during this course, particularly Message Queuing Telemetry Transport (MQTT). This is a lightweight messaging protocol designed for devices with limited resources. Its functioning relies on a broker (a server) that manages publication topics. Client publishers publish messages on specific topics, and client subscribers receive messages by subscribing to these topics.
-
 Thanks to its simple architecture, the MQTT protocol is widely used in IoT, where bandwidth consumption must be minimized and reliability is essential.
+\vspace{0.25cm}
 
 The second protocol we studied is oneM2M. More precisely, it is a standard endorsed by multiple standardization bodies, aiming to provide and ensure interoperability among IoT architectures. Based on REST, oneM2M proposes a hierarchical structure to model resources for an IoT application. The resources are organized on three levels: Application Entities (AE), Containers (CNT), and Content Instances (CI). These levels define the hierarchical storage space on servers. Application Entities (AE) represent available functionalities, within which there are Containers (CNT) that serve as data categories and Content Instances (CI) that hold published data instances.
-
 Thus, it is through a container in an AE that an IoT device can publish or read information.
 
 \subsection{Practical Work}
@@ -89,13 +88,14 @@ Had we had more time for this project, I would have liked to integrate Node-RED 
     \hline
     \rowcolor[gray]{0.8}
     \textbf{Skills} & \textbf{Required} & \textbf{Achieved} \\ \hline
+    \rowcolor[gray]{0.9} \textbf{Middleware for the IoT} &  &  \\ \hline
     Know how to situate the main standards for the Internet of Things & 4 & 4 \\ \hline
     Deploy an architecture compliant to an IoT standard and implement a sensor network & 4 & 4 \\ \hline
     Deploy and configure an IoT architecture using OM2M & 4 & 4 \\ \hline
     Interact with the different resources of the architecture using REST services & 4 & 4 \\ \hline
     Integrate a new technology into the deployed architecture & 4 & 4 \\ \hline
     \end{tabular}
-    \caption{Skill matrix for Middleware for the Internet of Things}
+    \caption{Skill matrix for Middleware for the IoT}
     \label{table:skills-middleware-iot}
 \end{table}
 
@@ -119,17 +119,17 @@ Had we had more time for this project, I would have liked to integrate Node-RED 
     Integrate New Technology & Integrate a new technology into the deployed architecture & Intermediate \\
     \hline
     \end{tabular}
-    \caption{Skills Acquired}
+    \caption{Skills Acquired During the Middleware for IoT Course}
     \label{tab:skills_acquired}
 \end{table}
 
 \subsection{Analysis and Remarks}
-Discovering and experimenting with two complementary IoT protocols—MQTT (lightweight, suitable for quick use cases with minimal resource consumption) and oneM2M (more structured and standardized, offering a comprehensive framework for large-scale IoT applications)—has helped me understand the importance of interoperability in the Internet of Things. The practical work was especially instructive, from configuring a Mosquitto broker and designing a mini-project on ESP8266 devices, to exploring oneM2M via Python scripts and using Node-RED for data flow management.
-
+Discovering and experimenting with two complementary IoT protocols—MQTT (lightweight, suitable for quick use cases with minimal resource consumption) and oneM2M (more structured and standardized, offering a comprehensive framework for large-scale IoT applications) has helped me understand the importance of interoperability in the Internet of Things. The practical work was especially instructive, from configuring a Mosquitto broker and designing a mini-project on ESP8266 devices, to exploring oneM2M via Python scripts and using Node-RED for data flow management.
 However, I would have liked to delve deeper into the direct integration of oneM2M into Node-RED to fully leverage its potential, particularly in terms of notifications and management rules.
+\vspace{0.25cm}
 
-In addition, installing the necessary tools on our personal machines slowed down my partner and me, especially for the oneM2M tutorial in the Jupyter Notebook. I would have appreciated having a ready-to-use solution—such as a virtual machine—to deploy at the start of the practical sessions, similar to what was provided for the \hyperref[sec:service_architecture]{Service Architecture} TP sessions.
+In addition, installing the necessary tools on our personal machines slowed down my partner and me, especially for the oneM2M tutorial in the Jupyter Notebook. I would have appreciated having a ready-to-use solution—such as a virtual machine to deploy at the start of the practical sessions, similar to what was provided for the \hyperref[sec:service_architecture]{Service Architecture} TP sessions.
+\vspace{0.25cm}
 
 From a personal standpoint, this course enhanced my academic path by giving me a more comprehensive view of different communication approaches in IoT. The skills I acquired will be valuable for future projects that require choosing the most appropriate solution for a specific context.
-
-Intending to pursue the Master’s Program in TLS-Sec after completing my INSA degree, I regret that the security aspects of these protocols were not addressed during the practical work. Ensuring secure exchanges (encryption, authentication, intrusion protection) is a major challenge in IoT.
+Intending to pursue the Master's Program in TLS-Sec after completing my INSA degree, I regret that the security aspects of these protocols were not addressed during the practical work. Ensuring secure exchanges (encryption, authentication, intrusion protection) is a major challenge in IoT.

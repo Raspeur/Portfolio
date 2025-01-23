@@ -14,17 +14,11 @@ This repository contains a detailed breakdown of my academic and professional jo
      - **Skills Acquired**: Practical and theoretical skills gained.
      - **Analysis and Remarks**: Personal reflections on the course's relevance to my career goals and its applicability in the field of engineering.
 
-### 2. **Professional Projects**
-   - Detailed descriptions of key projects, including:
-     - **Secure Communication Module**: Integration of cryptographic protocols in embedded systems.
-     - **WISPERS Project**: Wireless data transmission solutions for intracranial pressure monitoring.
-   - Technical documentation, code samples, and outcomes of these projects.
-
-### 3. **[Technical Reports](./Reports/)**
+### 2. **[Technical Reports](./Reports/)**
    - Reports showcasing my work on specific assignments, projects, and internships.
    - Topics range from driver development for microcontrollers to the implementation of secure software solutions.
 
-### 4. **[Resume](./CV_Clément_Gauché_ISS.pdf) and Certifications**
+### 3. **[Resume](./CV_Clément_Gauché_ISS.pdf) and Certifications**
    - My latest CV is included, outlining my education, skills, certifications (e.g., TOEIC), and professional experience.
 
 ## Why I Chose INSA Toulouse, ISS, and My Future Aspirations
