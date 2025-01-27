@@ -1,9 +1,169 @@
-\section{Security for connected objects}
+% \section{Security for connected objects}
+% \subsection{Context}
+% \indent \indent Le cours "Sécurité pour les Objets Connectés" a été donné par E. Alata et V. Migliore et a abordé des problématiques de sécurité  spécifiques, comme son nom l'indique, aux dispositifs IoT. Nous avons exploré des concepts théoriques et pratiques, des protocoles de sécurité, des techniques cryptographiques, ainsi que des études de vulnérabilités.\\
+% \noindent A une époque où les objets connectés sont omniprésents, ce cours a mis en lumière les défis de sécurité spécifique des systèmes IoT, du à leur contraintes en ressources, en performances et en connectivité.
+
+% \subsection{Technical Summary}
+% \indent \indent Dans les cours de Monsieur Alata nous navons abordé la sécurité des applications web, des protocoles de communication sécurisés et des microarchitectures. La sécurité des applications web avait déjà abordée lors d'un précédent cours du professeur en 3A, avec notamment l'introduction aux attaques par injection SQL, mais pas de facon aussi poussé.
+
+
+% \subsubsection{Sécurité des Applications Web}
+% \indent \indent Les séances de cours dédiées à la sécurité des applications web, ainsi que les travaux pratiques associés, nous ont permis de comprendre les vulnérabilités courantes des applications web et les techniques pour les exploiter. Nous avons notamment étudié les attaques par injection SQL, les attaques XSS (Cross-Site Scripting) et CSRF (Cross-Site Request Forgery), ainsi que les mesures de protection mises en place pour les contrer. Nous avons également abordé les problématiques de gestion des sessions et des cookies, ainsi que les bonnes pratiques pour sécuriser les applications web, telles que la validation des entrées, l'échappement des sorties et la mise en place de contrôles d'accès.
+
+% \subsubsection{Sécurité des Protocoles de Communication}
+
+% \indent \indent Dans cette section du cours, nous avons revu les propriétés de sécurité "fondamentales". Il y a notamment la confidentialité, garantissant que les informations échangées ne sont pas accessibles à des tiers, l'intégrité, qui assure que les données n'ont pas été altérées, l'authenticité, qui permet de vérifier l'identité des entités communicantes, et la non-répudiation, qui empêche les entités de nier leur participation à une communication. Et enfin nous avons abordé le concept de "post-compromission" qui vise à garantir que même après qu'une clef soit compromise, les communications futures redeviennent sécurisées.
+
+% \noindent Nous avons eu des exemple concret comme la protection contre les attaques par rejeux, en utilisant des nonces ou des timestamps.
+% Cette section nous a aussi introduit à des outils comme ProVerif pour formaliser les protocoles et évaluer leur sécurité face à divers types d'attaques.
+
+% \subsubsection{Sécurité des microarchitectures}
+% \indent \indent Cette section, qui a été la plus courte des 3, a abordé les attaques matérielles, exploitant les microarchitectures des composants. Il y avait par exemple les attaques Spectre et Meldown, qui exploitent la prédiction de branchement des microprocesseurs, pour exécuter des instructions pour accéder à des données sensibles.
+% Il y avait aussi le Reverse Engineering, qui permet de comprendre la microarchitecture internes des processeur, par des expériences. Il est par exemple possible de déterminer la taille d'un buffer caché en mesurant les temps d'accès mémoire.\\
+% \noindent Enfin nous avons vue les failles liées aux pipelines d'instructions, avec notamment la manipulation des RAW (Read After Write) hazards.\\
+
+% Les cours de M. Vincent Migliore ont eux couverts deux volets principaux : la cryptographie appliquée et la sécurité matérielle. Ces deux dimensions complémentaires ont permis de comprendre les vulnérabilités et les solutions adaptées aux systèmes IoT, où les contraintes de ressources et la diversité des menaces rendent la sécurisation particulièrement complexe.
+
+% \subsubsection{Cryptographie Appliquée}
+
+% \indent \indent Dans ce module, nous avons exploré les fondements et les applications modernes de la cryptographie. Le cours a commencé par une révision des notions de base, notamment les principes de substitution et permutation, avec des exemples comme les chiffrements de César, Vigenère et Hill. L'accent a ensuite été mis sur la cryptographie moderne, couvrant les propriétés de sécurité (confidentialité, intégrité, authenticité, non-répudiation) et les algorithmes de chiffrement symétrique (AES) et asymétrique (RSA). Nous avons porté une attention particuliere sur les modes de fonctionnement des chiffrements par blocs, comme le Cipher Block Chaining et le Counter Mode, ainsi que leurs implications en termes de sécurité.
+
+% Nous avons rapidement abordé  un standard de cryptographie légère, l'ISO/IEC 29192, qui spécifie des algorithmes adaptés aux ressources limitées des objets connectés.
+
+% \subsubsection{Sécurité Matérielle}
+% \indent \indent Cette partie du cours a pour moi été un rappel des cours de sécurité matérielle que j'ai eu en 3A. Nous avons revu les attaques physiques, comme les attaques par canaux cachés, les attaques par canaux auxiliaires et les attaques par fautes, ainsi que leurs contremesures. Plus spécifiquement, nous avons vu les attaques par l'analyse de la consommation electrique, les attaques temporelles sur les caches et les attaques par RowHammer. Comme nous avions déjà eu des TPs sur ces attaques les années passées, le professeur n'a pas jugé nécessaire de refaire des TPs sur ces sujets.\\
+
+% \subsection{Practical work}
+% \indent \indent Les travaux pratiques réalisés dans le cadre du cours ont été l'occasion de mettre en œuvre des concepts théoriques étudiés en cours. Ces activités ont permis d'approfondir ma compréhension des techniques de sécurité appliquées aux objets connectés et de développer des compétences pratiques.
+% \subsubsection{Attaques par Injection SQL}
+% Nous avons expérimenté les attaques par injection SQL sur une base de données vulnérable. À l'aide de requêtes malveillantes,nous avons démontré comment contourner un système d'authentification et accéder à des données sensibles. Pour sécuriser ces systèmes, nous avons mis en œuvre des requêtes paramétrées et des procédures stockées afin de prévenir l'exécution de commandes malveillantes.
+
+% \subsubsection{XSS (Cross-Site Scripting)}
+% Nous avons simulé des attaques XSS où un script malveillant est injecté dans une application web. Une des premières étape du TP et d'executer du code javascrip dans un champ de saisie utilisateur, nous permettant pu afficher un message dans le navigateur d'un utilisateur. Ce TP a permis d'explorer des mesures de protection telles que l'échappement des caractères spéciaux et la mise en œuvre d'entêtes de sécurité comme Content-Security-Policy.
+
+% \subsubsection{Attaques MITM (Man-in-the-Middle)}
+% Dans ce TP, nous avons utilisé la bibliothèque mbedTLS pour implémenter une attaque MITM où un attaquant intercepte et modifie les communications entre deux parties. Une simulation a montré comment un certificat intercepté pouvait être altéré, compromettant la confidentialité et l'intégrité des échanges. Ce travail a souligné l'importance des certificats valides et de la vérification des champs "Common Name" pour prévenir ce type d'attaques.
+
+% \subsubsection{Manipulation Quantique}
+% Un laboratoire innovant a exploré les principes de la communication quantique, notamment la distribution de clés quantiques (QKD). Nous avons configuré un système où des photons polarisés étaient utilisés pour partager une clé cryptographique. Une attention particulière a été portée à la calibration des équipements et à la robustesse des communications face aux attaques.
+
+% \subsubsection{Innovative Project - Wispers}
+% Dans le cadre du Innovative Project, nous avons mis en applcation le protocole RuBee, qui est un protocole de communication sans fil basse fréquence, pour lequel nous avons du mettre en place un "Frame Check Sequence". Ce FCS prévu pour vérifier l'intégrité de la data des trames est codée sur 1 octet, et et est calculé en prenant le reste de la division (modulo 2) par le polynôme générateur \(x^8+x^2+x+1\) du produit de \(x^8\) multiplié par le contenu de la trame.\\
+% Comme nous n'avons pas trouvé d'information concernant la fiabilité de ce FCS dans la norme IEEE, nous avons décidé de mettre en place des fuzzing pour tester la robustesse de ce FCS. En partant de l'hypothèse de ne vouloir avoir qu'un seul fcs possible pour une taille de trame donnée, nous avons été capables de déterminer qu'il est facilement possible de générer des trames différentes ayant un même FCS.\\
+% Cependant, nous nous trouvons dans un cas où le fcs sert a vérifier l'intégrité de la trame, à savoir qu'un bit n'est pas changé de valeur à cause d'une perturbation. Nous avons donc décidé de tester la robustesse du FCS, en modifiant, pour un taille de trame donnée, un bit de la trame et en vérifiant si le FCS détecte cette modification.\\
+% Après 9h de calculs nous avons pu monter à des trames de 9 mots de 4 bits sans détecter de collision.\\ Vous pouvez voir nos scripts dans le dossier "Python" de notre dépôt du projet Wispers.\\
+% \subsection{Skills acquired}
+% \begin{table}[H]
+%     \centering
+%     \arrayrulecolor{black} % Defines the color of the table borders
+%     \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+%     \begin{tabular}{|p{11cm}|c|c|}
+%     \hline
+%     \rowcolor[gray]{0.8}
+%     \textbf{Skills} & \textbf{Required} & \textbf{Achieved} \\ \hline
+%     \rowcolor[gray]{0.9} \textbf{Security for connected objects} &  &  \\ \hline
+%     Knowing the main issues in security for IoT & 3 & 3 \\ \hline
+%     Understand the terminology of security & 2 & 2 \\ \hline
+%     Being able to have a critical look at the design of a system from a security point of view & 2 & 2 \\ \hline
+%     Being able to understand a scientific article that explains a weakness or a security solution and to explain it & 2 & 2 \\ \hline
+%     \end{tabular}
+%     \caption{Skill matrix for Security for Connected Objects}
+%     \label{table:skills-security-iot}
+% \end{table}
+
+% \begin{table}[H]
+%     \centering
+%     \arrayrulecolor{black} % Defines the color of the table borders
+%     \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+%     \begin{tabular}{|>{\raggedright}p{3.5cm}|p{8cm}|c|}
+%     \hline
+%     \rowcolor[gray]{0.8}
+%     \textbf{Skill} & \textbf{Description} & \textbf{Level of Mastery} \\
+%     \hline
+%     Understanding IoT security issues & Ability to identify and understand security challenges in IoT systems, including constraints like resource limitations and connectivity vulnerabilities. & 3/4 \\
+%     \hline
+%     Knowledge of cryptographic techniques & Familiarity with modern cryptographic algorithms such as AES, RSA, and lightweight standards like ISO/IEC 29192, as well as their applications in securing IoT. & 3/4 \\
+%     \hline
+%     Practical application of security protocols & Experience in implementing and verifying security protocols using tools like ProVerif and programming libraries (e.g., mbedTLS). & 3/4 \\
+%     \hline
+%     Understanding and mitigating web vulnerabilities & Proficiency in identifying vulnerabilities such as SQL injection, XSS, and CSRF, and implementing countermeasures to secure web applications. & 3/4 \\
+%     \hline
+%     Analyzing hardware security threats & Knowledge of physical and side-channel attacks (e.g., cache timing, RowHammer, Spectre) and their countermeasures. & 2/4 \\
+%     \hline
+%     Use of quantum principles in security & Basic understanding of quantum communication and key distribution mechanisms to enhance security in IoT systems. & 2/4 \\
+%     \hline
+%     System design analysis & Ability to critically evaluate the design of IoT systems from a security perspective and propose improvements. & 3/4 \\
+%     \hline
+%     \end{tabular}
+%     \caption{Skill matrix for Security for Connected Objects}
+%     \label{table:skills-security-iot}
+% \end{table}
+
+
+% \subsection{Analysis and remarks}
+
+% \subsection{Analysis and remarks}
+
+% \indent \indent Le cours "Sécurité pour les Objets Connectés" a été une expérience extrêmement enrichissante. Il m'a permis de mieux appréhender les défis uniques liés à la sécurisation des systèmes IoT, en combinant des aspects théoriques et pratiques. Les cours de M. Alata ont approfondi ma compréhension des protocoles de communication sécurisés et des vulnérabilités web, tandis que les cours de M. Migliore m'ont donné une meilleure maîtrise des bases cryptographiques et des attaques matérielles.
+
+% \noindent L'aspect pratique du cours, notamment les travaux sur l'AES et les attaques Man-in-the-Middle, m'ont offert une vue d'ensemble claire des défis réels dans les systèmes connectés. Ces activités ont renforcé ma capacité à analyser les architectures de sécurité, à réflechir à des solutions robustes et à comprendre les interactions complexes entre le matériel et le logiciel.
+
+% \noindent Ce cours a conforté mon choix d'intégrer le Mastère Spécialisé TLS-SEC (Toulouse Sécurité) l'année prochaine. Il m'a permis de développer des compétences clés qui seront essentielles dans mon futur parcours professionnel et m'a motivé à poursuivre mes études dans le domaine de la sécurité informatique. Je suis également convaincu que les notions de sécurité vues dans ce cours auront une application directe durant les prochain mois, puisque j'intègrerai l'équipe sécurité chez Schaeffler.
+
+\section{Security for Connected Objects}
 \subsection{Context}
-\subsection{Technical}
-\subsection{Practical work}
-\subsection{Skills acquired}
-\begin{table}[h!]
+\indent \indent The course "Security for Connected Objects" was delivered by E. Alata and V. Migliore and focused on specific security issues, as its name suggests, related to IoT devices. We explored theoretical and practical concepts, security protocols, cryptographic techniques, and vulnerability studies.\\
+\noindent In an era where connected objects are ubiquitous, this course highlighted the unique security challenges of IoT systems, driven by their resource, performance, and connectivity constraints.
+
+\subsection{Technical Summary}
+\indent \indent During Mr. Alata's classes, we addressed the security of web applications, secure communication protocols, and microarchitectures. Web application security had already been covered in a previous 3A course with the professor, particularly with the introduction of SQL injection attacks, though not as in-depth as this time.
+
+\subsubsection{Web Application Security}
+\indent \indent The lectures and associated practical work on web application security enabled us to understand common vulnerabilities in web applications and techniques to exploit them. Specifically, we studied SQL injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF) attacks, as well as the protective measures implemented to counter them. We also covered session and cookie management issues and best practices for securing web applications, such as input validation, output escaping, and implementing access controls.
+
+\subsubsection{Security of Communication Protocols}
+\indent \indent In this part of the course, we revisited the "fundamental" security properties, including confidentiality, ensuring that exchanged information is inaccessible to third parties; integrity, ensuring that data has not been altered; authenticity, allowing the verification of the identity of communicating entities; and non-repudiation, preventing entities from denying their participation in communication. We also discussed the concept of "post-compromise security," which aims to ensure that even after a key is compromised, future communications can regain security.
+
+\noindent We reviewed concrete examples such as replay attack protection using nonces or timestamps. This section also introduced us to tools like ProVerif for formalizing protocols and assessing their security against various types of attacks.
+
+\subsubsection{Microarchitecture Security}
+\indent \indent This section, the shortest of the three, addressed hardware attacks exploiting the microarchitecture of components. Examples included Spectre and Meltdown attacks, which leverage microprocessor branch prediction to execute instructions accessing sensitive data. Reverse engineering was also discussed, allowing for an understanding of the internal microarchitecture of processors through experimentation. For instance, the size of a hidden buffer can be determined by measuring memory access times.\\
+\noindent Finally, we examined vulnerabilities related to instruction pipelines, including manipulation of RAW (Read After Write) hazards.
+\\
+
+Mr. Migliore's classes covered two main areas: applied cryptography and hardware security. These two complementary dimensions helped us understand the vulnerabilities and appropriate solutions for IoT systems, where resource constraints and the diversity of threats make securing them particularly complex.
+
+\subsubsection{Applied Cryptography}
+\indent \indent In this module, we explored the fundamentals and modern applications of cryptography. The course began with a review of basic notions, including substitution and permutation principles, with examples like Caesar, Vigenère, and Hill ciphers. Modern cryptography was then emphasized, covering security properties (confidentiality, integrity, authenticity, non-repudiation) and symmetric (AES) and asymmetric (RSA) encryption algorithms. Particular attention was paid to block cipher modes of operation, such as Cipher Block Chaining and Counter Mode, along with their security implications.
+
+We briefly addressed a lightweight cryptography standard, ISO/IEC 29192, specifying algorithms tailored to the limited resources of connected objects.
+
+\subsubsection{Hardware Security}
+\indent \indent This part of the course served as a refresher on hardware security topics previously covered in 3A. We revisited physical attacks, such as side-channel and fault attacks, along with their countermeasures. Specifically, we examined power consumption analysis attacks, cache timing attacks, and RowHammer attacks. Since we had already conducted practical work on these attacks in prior years, the professor deemed it unnecessary to repeat the same exercises.
+
+\subsection{Practical Work}
+\indent \indent The practical work conducted during the course provided an opportunity to apply theoretical concepts studied in lectures. These activities deepened my understanding of security techniques for connected objects and developed my practical skills.
+
+\subsubsection{SQL Injection Attacks}
+\indent \indent We experimented with SQL injection attacks on a vulnerable database. Using malicious queries, we demonstrated how to bypass authentication systems and access sensitive data. To secure these systems, we implemented parameterized queries and stored procedures to prevent the execution of malicious commands.
+
+\subsubsection{Cross-Site Scripting (XSS)}
+\indent \indent We simulated XSS attacks where a malicious script is injected into a web application. One of the first steps in the lab involved executing JavaScript code in a user input field, allowing us to display a message in a user's browser. This lab allowed us to explore protective measures such as escaping special characters and implementing security headers like Content-Security-Policy.
+
+\subsubsection{Man-in-the-Middle (MITM) Attacks}
+\indent \indent In this lab, we used the mbedTLS library to implement a MITM attack, where an attacker intercepts and modifies communications between two parties. A simulation demonstrated how an intercepted certificate could be altered, compromising the confidentiality and integrity of exchanges. This work highlighted the importance of valid certificates and verifying "Common Name" fields to prevent such attacks.
+
+\subsubsection{Quantum Manipulation}
+\indent \indent An innovative lab explored the principles of quantum communication, particularly quantum key distribution (QKD). We configured a system using polarized photons to share a cryptographic key, focusing on equipment calibration and the robustness of communications against attacks.
+
+\subsubsection{Innovative Project - Wispers}
+\indent \indent As part of the Innovative Project, we implemented the RuBee protocol, a low-frequency wireless communication protocol, which required us to establish a "Frame Check Sequence" (FCS). The FCS, designed to verify the integrity of frame data, was encoded on one byte and calculated by dividing (modulo 2) the product of \(x^8\) multiplied by the frame content by the generator polynomial \(x^8 + x^2 + x + 1\).\\
+Lacking information on the reliability of this FCS in the IEEE standard, we conducted fuzzing tests to assess its robustness. Assuming that only one FCS should exist for a given frame size, we determined it was feasible to generate different frames with the same FCS.\\
+However, since the FCS is meant to detect bit value changes due to interference, we tested its robustness by modifying one bit in a given frame size and verifying if the FCS detected the modification.\\
+After 9 hours of computation, we were able to scale up to frames of 9 words of 4 bits without detecting collisions.\\ You can find our scripts in the "Python" folder of our Wispers project repository at \url{https://github.com/NoNo47400/WispersProject}.\\
+
+\subsection{Skills Acquired}
+\begin{table}[H]
     \centering
     \arrayrulecolor{black} % Defines the color of the table borders
     \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
@@ -21,4 +181,37 @@
     \label{table:skills-security-iot}
 \end{table}
 
-\subsection{Analysis and remarks}
+\begin{table}[H]
+    \centering
+    \arrayrulecolor{black} % Defines the color of the table borders
+    \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+    \begin{tabular}{|>{\raggedright}p{3.5cm}|p{8cm}|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Skill} & \textbf{Description} & \textbf{Level of Mastery} \\
+    \hline
+    Understanding IoT security issues & Ability to identify and understand security challenges in IoT systems, including constraints like resource limitations and connectivity vulnerabilities. & 3/4 \\
+    \hline
+    Knowledge of cryptographic techniques & Familiarity with modern cryptographic algorithms such as AES, RSA, and lightweight standards like ISO/IEC 29192, as well as their applications in securing IoT. & 3/4 \\
+    \hline
+    Practical application of security protocols & Experience in implementing and verifying security protocols using tools like ProVerif and programming libraries (e.g., mbedTLS). & 3/4 \\
+    \hline
+    Understanding and mitigating web vulnerabilities & Proficiency in identifying vulnerabilities such as SQL injection, XSS, and CSRF, and implementing countermeasures to secure web applications. & 3/4 \\
+    \hline
+    Analyzing hardware security threats & Knowledge of physical and side-channel attacks (e.g., cache timing, RowHammer, Spectre) and their countermeasures. & 2/4 \\
+    \hline
+    Use of quantum principles in security & Basic understanding of quantum communication and key distribution mechanisms to enhance security in IoT systems. & 2/4 \\
+    \hline
+    System design analysis & Ability to critically evaluate the design of IoT systems from a security perspective and propose improvements. & 3/4 \\
+    \hline
+    \end{tabular}
+    \caption{Skill matrix for Security for Connected Objects}
+    \label{table:skills-security-iot}
+\end{table}
+
+\subsection{Analysis and Remarks}
+\indent \indent The course "Security for Connected Objects" was an extremely enriching experience. It allowed me to better understand the unique challenges of securing IoT systems by combining theoretical and practical aspects. Mr. Alata's lectures deepened my understanding of secure communication protocols and web vulnerabilities, while Mr. Migliore's classes enhanced my mastery of cryptographic foundations and hardware attacks.
+
+\noindent The practical aspect of the course, particularly the work on AES and Man-in-the-Middle attacks, provided a clear overview of real-world challenges in connected systems. These activities strengthened my ability to analyze security architectures, think of robust solutions, and understand the complex interactions between hardware and software.
+
+\noindent This course solidified my decision to pursue the TLS-SEC Specialized Master's (Toulouse Security) next year. It helped me develop key skills essential for my future career and motivated me to further my studies in the field of computer security. I am also confident that the security concepts covered in this course will have direct applications in the coming months as I join the security team at Schaeffler.
