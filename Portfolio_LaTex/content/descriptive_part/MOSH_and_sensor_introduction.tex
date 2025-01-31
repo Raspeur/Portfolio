@@ -89,22 +89,23 @@
 \subsection{Technical Summary}
 
 \indent \indent Spanning several weeks, this module began with the gas sensor development week at AIME. Afterwards, we had an introduction to microcontrollers, primarily aimed at students from the IR (Computer Engineering) track, who discovered microcontrollers using Arduino boards.
-
-Since my teammate and I come from the AE speciality and were more comfortable with microcontrollers, we chose to work with an ESP8266 and connect it to INSA's LoRa network using an RN2483 module. However, this module proved to be barely functional, likely due to power supply errors made by students in previous years. Indeed, it is supposed to be powered at 3.3 V, but Arduino signals are 5 V, which damages the module in the absence of a level-shifting stage.
 \vspace{0.25cm}
 
-Faced with these issues, I decided to use my own ESP32 modules, which integrate a LoRa module directly. We also encountered problems with INSA's ChirpStack gateway, which was often saturated, allowing us to send frames successfully only once every ten attempts. I therefore decided to use my own gateway, which is registered on The Things Network (TTN) and worked perfectly. Once the LoRa frames were visible on the TTN website, we used an MQ-3B sensor to simulate our gas sensor's operation.
+\noindent Since my teammate and I come from the AE speciality and were more comfortable with microcontrollers, we chose to work with an ESP8266 and connect it to INSA's LoRa network using an RN2483 module. However, this module proved to be barely functional, likely due to power supply errors made by students in previous years. Indeed, it is supposed to be powered at 3.3 V, but Arduino signals are 5 V, which damages the module in the absence of a level-shifting stage.
 \vspace{0.25cm}
 
-Next, we took a component-sizing course using LTSPICE, to understand our adaptation stage and correctly dimension the components.
+\noindent Faced with these issues, I decided to use my own ESP32 modules, which integrate a LoRa module directly. We also encountered problems with INSA's ChirpStack gateway, which was often saturated, allowing us to send frames successfully only once every ten attempts. I therefore decided to use my own gateway, which is registered on The Things Network (TTN) and worked perfectly. Once the LoRa frames were visible on the TTN website, we used an MQ-3B sensor to simulate our gas sensor's operation.
+\vspace{0.25cm}
+
+\noindent Next, we took a component-sizing course using LTSPICE, to understand our adaptation stage and correctly dimension the components.
 We also had an introduction to Git. This was not new to me, since I use Git in my company, but it allowed my classmates to discover this version-control tool.
 We then learned about MIT App Inventor, a tool for quickly building Android apps. By adding a Bluetooth module to our ESP32, we were able to control an LED from the app.
 \vspace{0.25cm}
 
-We then moved on to NodeRed, a block-based programming tool that makes it very easy to create web applications. We used it to build a web interface for viewing our gas-sensor data, retrieving these data via MQTT from the TTN platform.
+\noindent We then moved on to NodeRed, a block-based programming tool that makes it very easy to create web applications. We used it to build a web interface for viewing our gas-sensor data, retrieving these data via MQTT from the TTN platform.
 \vspace{0.25cm}
 
-Finally, we were introduced to KiCad, a PCB design software. We used it to create a “shield” for our ESP32, incorporating the adaptation stage for the gas sensor. Due to time constraints, I ordered the PCB from JLCPCB and assembled the components upon its arrival. \\
+\noindent Finally, we were introduced to KiCad, a PCB design software. We used it to create a “shield” for our ESP32, incorporating the adaptation stage for the gas sensor. Due to time constraints, I ordered the PCB from JLCPCB and assembled the components upon its arrival. \\
 You can find the entire project on my GitHub: \url{https://github.com/Raspeur/AIME_sensor}
 
 \subsection{Skills Acquired}
@@ -186,9 +187,12 @@ You can find the entire project on my GitHub: \url{https://github.com/Raspeur/AI
 \subsection{Analysis and remarks}
 
 \indent \indent This course was very interesting to me because it allowed me to discover new tools such as KiCad and NodeRed, and to use them in an end-to-end project. We went from creating a sensor all the way to a web interface for data visualization, including designing a PCB. It was very rewarding to see the project come to life and to manage our time effectively to complete everything on schedule.
+\vspace{0.25cm}
 
-I also enjoyed helping classmates from the IR track, who did not have much experience with microcontrollers and were not always very comfortable with them.
+\noindent I also enjoyed helping classmates from the IR track, who did not have much experience with microcontrollers and were not always very comfortable with them.
+\vspace{0.25cm}
 
-As part of this course, I also learned about licensing concepts whether open source or proprietary and all their implications. This is a notion I consider very important, and it was the first time I had addressed it in my studies.
+\noindent As part of this course, I also learned about licensing concepts whether open source or proprietary and all their implications. This is a notion I consider very important, and it was the first time I had addressed it in my studies.
+\vspace{0.25cm}
 
-Finally, I got to learn more about the functioning and limitations of INSA's ChirpStack gateway, which prompted me to use my own LoRa gateway registered on the LoRaWAN TTN network.
+\noindent Finally, I got to learn more about the functioning and limitations of INSA's ChirpStack gateway, which prompted me to use my own LoRa gateway registered on the LoRaWAN TTN network.

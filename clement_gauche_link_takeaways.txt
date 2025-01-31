@@ -1,0 +1,2 @@
+On my GitHub repository, you can find the takeaways in /LP-WPAN and /Emerging_Networks
+Link to my GitHub repository containing my PortFolio (folder /Reports): https://github.com/Raspeur/Portfolio/tree/main/Reports

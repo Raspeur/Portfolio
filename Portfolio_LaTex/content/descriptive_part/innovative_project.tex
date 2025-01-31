@@ -1,9 +1,40 @@
 \section{Innovative Project - Wispers}
 
 \subsection{Context}
+\indent \indent The WISPERS (Wireless System for Intracranial Pressure Monitoring based on 3D-printed Piezo-capacitive Sensor) project is a research initiative developed in collaboration with LAAS-CNRS MEMS and MINC teams and INSA Toulouse. The project aims to improve intracranial pressure (ICP) monitoring through a wireless, battery-free system capable of continuous and precise data collection.
+\vspace{0.25cm}
+
+\noindent Current ICP monitoring techniques are invasive, costly, and pose infection risks, making it imperative to develop a safer and more efficient solution. WISPERS addresses this challenge by implementing a non-invasive skin patch that collects the intracranial sensor data and transmits it to a central hub via a secure, low-power, and robust wireless communication system.
+\vspace{0.25cm}
+
+\noindent Our team was responsible for the communication architecture, including:
+
+\begin{itemize}
+\item Implementing the RuBee protocol for secure data transmission.
+\item Developing the modulation and demodulation systems for signal transmission.
+\item Designing and testing the state machines to handle data exchange between the patch and the hub.
+\item Ensuring real-time visualization of the transmitted data through a web interface.
+\end{itemize}
+
+\subsection{Technical Summary}
+\indent \indent To achieve wireless, battery-free data transmission, we adopted the RuBee communication protocol, which is known for its low power consumption, resistance to electromagnetic interference, and high security. Unlike Bluetooth or Wi-Fi, RuBee operates at low frequencies (131 kHz), making it ideal for medical applications where traditional RF protocols struggle due to metallic environments or biological tissues.
+
+\noindent Our contributions focused on:
+\begin{itemize}
+    \item Protocol Data Unit (PDU) construction and decoding in VHDL for the patch.
+    \item State machine design for managing data exchange.
+    \item Signal modulation and demodulation using Amplitude Shift Keying (ASK) and Bi-Phase Mark Coding (BMC) for enhanced robustness.
+    \item Development of a digital filter to extract meaningful data from the received signals.
+    \item Hardware design, including PCB prototyping and unitary testing of key components such as DAC (R2R ladder), inductance, and active filtering circuits.
+\end{itemize}
+
+\noindent Each software and hardware component was independently tested and validated, ensuring the correct functionality of each module. However, due to time constraints, we were unable to test the fully assembled system. The physical modulation part was successfully tested at the LAAS laboratory, confirming its feasibility for signal transmission.
+
 \subsection{Skills acquired}
 
-\begin{table}[h!]
+
+
+\begin{table}[H]
     \centering
     \arrayrulecolor{black} % Defines the color of the table borders
     \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
@@ -20,3 +51,44 @@
     \caption{Skill matrix for innovative project management and self-evaluation}
     \label{table:skills-innovative}
 \end{table}
+
+\begin{table}[H]
+    \centering
+    \arrayrulecolor{black} % Defines the color of the table borders
+    \renewcommand{\arraystretch}{1.5} % Adjusts the vertical spacing between rows
+    \begin{tabular}{|p{3.5cm}|p{8cm}|c|}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Skill} & \textbf{Description} & \textbf{Level of Mastery} \\
+    \hline
+    Innovative Project Management & Managing a long-term, interdisciplinary project in a medical context. & Advanced \\
+    \hline
+    Low-Power Wireless Communication & Implementing and optimizing the RuBee protocol for data transfer. & Advanced \\
+    \hline
+    Digital Signal Processing & Modulating, demodulating, and filtering signals for robust data transmission. & Intermediate \\
+    \hline
+    Hardware Design \& Testing & Designing PCB components and validating them through unitary tests. & Intermediate \\
+    \hline
+    Embedded Systems (VHDL \& C++) & Implementing PDU encoding/decoding and protocol logic in hardware. & Advanced \\
+    \hline
+    Medical IoT Development & Adapting wireless sensor technologies for biomedical applications. & Intermediate \\
+    \hline
+    \end{tabular}
+    \caption{Skill matrix for the WISPERS project}
+    \label{tab:skill_matrix}
+\end{table}
+
+\subsection{Analysis and remarks}
+\indent \indent This innovative project was one of the most challenging and rewarding experiences of my academic journey. It allowed me to apply advanced embedded system concepts to a real-world medical problem, requiring a high level of technical expertise, teamwork, and problem-solving.
+
+\noindent One of the main difficulties we faced was the time constraint, which prevented us from fully assembling and testing the complete system. However, we successfully validated each module independently, ensuring that the communication protocol, modulation, and data handling worked correctly.
+\vspace{0.25cm}
+
+\noindent A key success was the physical modulation tests conducted at the LAAS laboratory, which confirmed the feasibility of using Amplitude Shift Keying (ASK) and Bi-Phase Mark Coding (BMC) with RuBee. These results were particularly satisfying, as they demonstrated the robustness of our signal transmission approach in a real medical environment.
+\vspace{0.25cm}
+
+\noindent Another valuable takeaway was the interdisciplinary collaboration required for this project. We had to coordinate between hardware, software, and communication systems, which reinforced my ability to work in a multidisciplinary team. Additionally, adapting low-power wireless communication to a biomedical application highlighted the importance of energy efficiency and secure data transmission in healthcare technologies.
+\vspace{0.25cm}
+
+\noindent If we had more time, we would have liked to integrate all hardware and software components into a fully functional prototype, and perform a complete end-to-end testing of the system, from data collection to web interface visualization.\\
+We would have also liked to optimize energy consumption for longer operation without external power sources. And despite these limitations, this project has strengthened my interest in  IoT and embedded systems. It has also provided valuable experience in protocol implementation, hardware testing, and digital signal processing, which will be invaluable for my future career in embedded systems and IoT security.

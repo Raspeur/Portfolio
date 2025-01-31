@@ -123,6 +123,7 @@
 
 \subsubsection{Security of Communication Protocols}
 \indent \indent In this part of the course, we revisited the "fundamental" security properties, including confidentiality, ensuring that exchanged information is inaccessible to third parties; integrity, ensuring that data has not been altered; authenticity, allowing the verification of the identity of communicating entities; and non-repudiation, preventing entities from denying their participation in communication. We also discussed the concept of "post-compromise security," which aims to ensure that even after a key is compromised, future communications can regain security.
+\vspace{0.25cm}
 
 \noindent We reviewed concrete examples such as replay attack protection using nonces or timestamps. This section also introduced us to tools like ProVerif for formalizing protocols and assessing their security against various types of attacks.
 
@@ -135,8 +136,9 @@ Mr. Migliore's classes covered two main areas: applied cryptography and hardware
 
 \subsubsection{Applied Cryptography}
 \indent \indent In this module, we explored the fundamentals and modern applications of cryptography. The course began with a review of basic notions, including substitution and permutation principles, with examples like Caesar, Vigenère, and Hill ciphers. Modern cryptography was then emphasized, covering security properties (confidentiality, integrity, authenticity, non-repudiation) and symmetric (AES) and asymmetric (RSA) encryption algorithms. Particular attention was paid to block cipher modes of operation, such as Cipher Block Chaining and Counter Mode, along with their security implications.
+\vspace{0.25cm}
 
-We briefly addressed a lightweight cryptography standard, ISO/IEC 29192, specifying algorithms tailored to the limited resources of connected objects.
+\noindent We briefly addressed a lightweight cryptography standard, ISO/IEC 29192, specifying algorithms tailored to the limited resources of connected objects.
 
 \subsubsection{Hardware Security}
 \indent \indent This part of the course served as a refresher on hardware security topics previously covered in 3A. We revisited physical attacks, such as side-channel and fault attacks, along with their countermeasures. Specifically, we examined power consumption analysis attacks, cache timing attacks, and RowHammer attacks. Since we had already conducted practical work on these attacks in prior years, the professor deemed it unnecessary to repeat the same exercises.
@@ -157,10 +159,14 @@ We briefly addressed a lightweight cryptography standard, ISO/IEC 29192, specify
 \indent \indent An innovative lab explored the principles of quantum communication, particularly quantum key distribution (QKD). We configured a system using polarized photons to share a cryptographic key, focusing on equipment calibration and the robustness of communications against attacks.
 
 \subsubsection{Innovative Project - Wispers}
-\indent \indent As part of the Innovative Project, we implemented the RuBee protocol, a low-frequency wireless communication protocol, which required us to establish a "Frame Check Sequence" (FCS). The FCS, designed to verify the integrity of frame data, was encoded on one byte and calculated by dividing (modulo 2) the product of \(x^8\) multiplied by the frame content by the generator polynomial \(x^8 + x^2 + x + 1\).\\
-Lacking information on the reliability of this FCS in the IEEE standard, we conducted fuzzing tests to assess its robustness. Assuming that only one FCS should exist for a given frame size, we determined it was feasible to generate different frames with the same FCS.\\
-However, since the FCS is meant to detect bit value changes due to interference, we tested its robustness by modifying one bit in a given frame size and verifying if the FCS detected the modification.\\
-After 9 hours of computation, we were able to scale up to frames of 9 words of 4 bits without detecting collisions.\\ You can find our scripts in the "Python" folder of our Wispers project repository at \url{https://github.com/NoNo47400/WispersProject}.\\
+\indent \indent As part of the Innovative Project, we implemented the RuBee protocol, a low-frequency wireless communication protocol, which required us to establish a "Frame Check Sequence" (FCS). The FCS, designed to verify the integrity of frame data, was encoded on one byte and calculated by dividing (modulo 2) the product of \(x^8\) multiplied by the frame content by the generator polynomial \(x^8 + x^2 + x + 1\).
+\vspace{0.25cm}
+
+\noindent Lacking information on the reliability of this FCS in the IEEE standard, we conducted fuzzing tests to assess its robustness. Assuming that only one FCS should exist for a given frame size, we determined it was feasible to generate different frames with the same FCS.
+However, since the FCS is meant to detect bit value changes due to interference, we tested its robustness by modifying one bit in a given frame size and verifying if the FCS detected the modification.
+\vspace{0.25cm}
+
+\noindent After 9 hours of computation, we were able to scale up to frames of 9 words of 4 bits without detecting collisions.\\ You can find our scripts in the "Python" folder of our Wispers project repository at \url{https://github.com/NoNo47400/WispersProject}.\\
 
 \subsection{Skills Acquired}
 \begin{table}[H]
@@ -211,7 +217,9 @@ After 9 hours of computation, we were able to scale up to frames of 9 words of 4
 
 \subsection{Analysis and Remarks}
 \indent \indent The course "Security for Connected Objects" was an extremely enriching experience. It allowed me to better understand the unique challenges of securing IoT systems by combining theoretical and practical aspects. Mr. Alata's lectures deepened my understanding of secure communication protocols and web vulnerabilities, while Mr. Migliore's classes enhanced my mastery of cryptographic foundations and hardware attacks.
+\vspace{0.25cm}
 
 \noindent The practical aspect of the course, particularly the work on AES and Man-in-the-Middle attacks, provided a clear overview of real-world challenges in connected systems. These activities strengthened my ability to analyze security architectures, think of robust solutions, and understand the complex interactions between hardware and software.
+\vspace{0.25cm}
 
 \noindent This course solidified my decision to pursue the TLS-SEC Specialized Master's (Toulouse Security) next year. It helped me develop key skills essential for my future career and motivated me to further my studies in the field of computer security. I am also confident that the security concepts covered in this course will have direct applications in the coming months as I join the security team at Schaeffler.

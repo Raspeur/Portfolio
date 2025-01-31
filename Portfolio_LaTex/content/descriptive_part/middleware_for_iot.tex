@@ -55,28 +55,33 @@
 
 \section{Middleware for IoT}
 \subsection{Context}
-The Middleware for IoT course was taught by Professor Thierry Monteil. The main objectives of this course were to explore different approaches and communication protocols, and to understand the challenges of communication between connected devices in order to implement solutions tailored to specific needs.
+\indent \indent The Middleware for IoT course was taught by Professor Thierry Monteil. The main objectives of this course were to explore different approaches and communication protocols, and to understand the challenges of communication between connected devices in order to implement solutions tailored to specific needs.
+\vspace{0.25cm}
 
-Like the course \hyperref[sec:service_architecture]{Service Architecture} taught by Ms.\ Nawal Guermouche, this course was delivered in the form of a MOOC (Massive Open Online Course). Afterwards, we carried out a series of practical exercises designed to illustrate the concepts discussed in the MOOC, notably the use of MQTT, oneM2M, and Node-RED.
+\noindent Like the course \hyperref[sec:service_architecture]{Service Architecture} taught by Ms.\ Nawal Guermouche, this course was delivered in the form of a MOOC (Massive Open Online Course). Afterwards, we carried out a series of practical exercises designed to illustrate the concepts discussed in the MOOC, notably the use of MQTT, oneM2M, and Node-RED.
+\vspace{0.25cm}
 
-The goal of these practical sessions was to understand how multiple connected devices can interact with each other by choosing appropriate protocols, while taking into account the variety of existing hardware and software infrastructures.
+\noindent The goal of these practical sessions was to understand how multiple connected devices can interact with each other by choosing appropriate protocols, while taking into account the variety of existing hardware and software infrastructures.
 
 \subsection{Technical Summary}
-As mentioned earlier, we studied several communication protocols during this course, particularly Message Queuing Telemetry Transport (MQTT). This is a lightweight messaging protocol designed for devices with limited resources. Its functioning relies on a broker (a server) that manages publication topics. Client publishers publish messages on specific topics, and client subscribers receive messages by subscribing to these topics.
+\indent \indent As mentioned earlier, we studied several communication protocols during this course, particularly Message Queuing Telemetry Transport (MQTT). This is a lightweight messaging protocol designed for devices with limited resources. Its functioning relies on a broker (a server) that manages publication topics. Client publishers publish messages on specific topics, and client subscribers receive messages by subscribing to these topics.
 Thanks to its simple architecture, the MQTT protocol is widely used in IoT, where bandwidth consumption must be minimized and reliability is essential.
 \vspace{0.25cm}
 
-The second protocol we studied is oneM2M. More precisely, it is a standard endorsed by multiple standardization bodies, aiming to provide and ensure interoperability among IoT architectures. Based on REST, oneM2M proposes a hierarchical structure to model resources for an IoT application. The resources are organized on three levels: Application Entities (AE), Containers (CNT), and Content Instances (CI). These levels define the hierarchical storage space on servers. Application Entities (AE) represent available functionalities, within which there are Containers (CNT) that serve as data categories and Content Instances (CI) that hold published data instances.
+\noindent The second protocol we studied is oneM2M. More precisely, it is a standard endorsed by multiple standardization bodies, aiming to provide and ensure interoperability among IoT architectures. Based on REST, oneM2M proposes a hierarchical structure to model resources for an IoT application. The resources are organized on three levels: Application Entities (AE), Containers (CNT), and Content Instances (CI). These levels define the hierarchical storage space on servers. Application Entities (AE) represent available functionalities, within which there are Containers (CNT) that serve as data categories and Content Instances (CI) that hold published data instances.
 Thus, it is through a container in an AE that an IoT device can publish or read information.
 
 \subsection{Practical Work}
-The first project in the practical sessions involved deploying an MQTT broker using Mosquitto and setting up simple message exchanges among several ESP8266 devices. One ESP8266 acted as a button (the publisher), while another controlled an LED (the subscriber). Any change in the button’s state was reflected by turning the LED on or off.\\
+\indent \indent The first project in the practical sessions involved deploying an MQTT broker using Mosquitto and setting up simple message exchanges among several ESP8266 devices. One ESP8266 acted as a button (the publisher), while another controlled an LED (the subscriber). Any change in the button's state was reflected by turning the LED on or off.
+\vspace{0.25cm}
 
-The second project, which was essentially the same as the first but with oneM2M, began with following a tutorial in a Jupyter Notebook to understand the core concepts. The first exercises in the notebook enabled us to learn how to create AEs, containers, and content instances. We then went a step further by exploring group creation, notifications, and rules that can automatically update resources.\\
+\noindent The second project, which was essentially the same as the first but with oneM2M, began with following a tutorial in a Jupyter Notebook to understand the core concepts. The first exercises in the notebook enabled us to learn how to create AEs, containers, and content instances. We then went a step further by exploring group creation, notifications, and rules that can automatically update resources.
+\vspace{0.25cm}
 
-Only after mastering these concepts did we use a oneM2M server and a Python script to simulate the same application we had built with MQTT. To achieve an equivalent setup to the first project, my partner and I simulated a virtual “button” and a virtual “LED.” A Python script allowed us to create AEs, containers, and content instances for both the button and the LED, as well as manage notifications. 
+\noindent Only after mastering these concepts did we use a oneM2M server and a Python script to simulate the same application we had built with MQTT. To achieve an equivalent setup to the first project, my partner and I simulated a virtual “button” and a virtual “LED.” A Python script allowed us to create AEs, containers, and content instances for both the button and the LED, as well as manage notifications. 
+\vspace{0.25cm}
 
-Had we had more time for this project, I would have liked to integrate Node-RED to more easily manage data flows among the various IoT devices. Node-RED would have provided a visual interface to intuitively connect hardware devices, APIs, and online services.
+\noindent Had we had more time for this project, I would have liked to integrate Node-RED to more easily manage data flows among the various IoT devices. Node-RED would have provided a visual interface to intuitively connect hardware devices, APIs, and online services.
 
 \subsection{Skills Acquired}
 
@@ -124,12 +129,12 @@ Had we had more time for this project, I would have liked to integrate Node-RED 
 \end{table}
 
 \subsection{Analysis and Remarks}
-Discovering and experimenting with two complementary IoT protocols—MQTT (lightweight, suitable for quick use cases with minimal resource consumption) and oneM2M (more structured and standardized, offering a comprehensive framework for large-scale IoT applications) has helped me understand the importance of interoperability in the Internet of Things. The practical work was especially instructive, from configuring a Mosquitto broker and designing a mini-project on ESP8266 devices, to exploring oneM2M via Python scripts and using Node-RED for data flow management.
+\indent \indent Discovering and experimenting with two complementary IoT protocols—MQTT (lightweight, suitable for quick use cases with minimal resource consumption) and oneM2M (more structured and standardized, offering a comprehensive framework for large-scale IoT applications) has helped me understand the importance of interoperability in the Internet of Things. The practical work was especially instructive, from configuring a Mosquitto broker and designing a mini-project on ESP8266 devices, to exploring oneM2M via Python scripts and using Node-RED for data flow management.
 However, I would have liked to delve deeper into the direct integration of oneM2M into Node-RED to fully leverage its potential, particularly in terms of notifications and management rules.
 \vspace{0.25cm}
 
-In addition, installing the necessary tools on our personal machines slowed down my partner and me, especially for the oneM2M tutorial in the Jupyter Notebook. I would have appreciated having a ready-to-use solution—such as a virtual machine to deploy at the start of the practical sessions, similar to what was provided for the \hyperref[sec:service_architecture]{Service Architecture} TP sessions.
+\noindent In addition, installing the necessary tools on our personal machines slowed down my partner and me, especially for the oneM2M tutorial in the Jupyter Notebook. I would have appreciated having a ready-to-use solution such as a virtual machine to deploy at the start of the practical sessions, similar to what was provided for the \hyperref[sec:service_architecture]{Service Architecture} TP sessions.
 \vspace{0.25cm}
 
-From a personal standpoint, this course enhanced my academic path by giving me a more comprehensive view of different communication approaches in IoT. The skills I acquired will be valuable for future projects that require choosing the most appropriate solution for a specific context.
+\noindent From a personal standpoint, this course enhanced my academic path by giving me a more comprehensive view of different communication approaches in IoT. The skills I acquired will be valuable for future projects that require choosing the most appropriate solution for a specific context.
 Intending to pursue the Master's Program in TLS-Sec after completing my INSA degree, I regret that the security aspects of these protocols were not addressed during the practical work. Ensuring secure exchanges (encryption, authentication, intrusion protection) is a major challenge in IoT.
